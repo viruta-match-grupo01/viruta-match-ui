@@ -1,17 +1,27 @@
-# React + Vite
+# Viruta Match UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Entrega del 16/10/2026 para `viruta-match-grupo01/viruta-match-ui`. React + Vite del starter actual, con los módulos B y diseño común del acuerdo.
 
-Currently, two official plugins are available:
+## Ejecutar
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Primero iniciar la API con su migración y seed. En otra terminal, dentro de UI:
 
-## React Compiler
+```bash
+npm ci
+cp .env.example .env
+npm run dev
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Abrir http://127.0.0.1:5173. El puerto es fijo; si está ocupado, cerrar la instancia anterior. Vite hace proxy de `/api` a `127.0.0.1:3001`; no se conecta con SQLite.
 
-## Expanding the Oxlint configuration
+Prueba de cliente: `usuario1@example.invalid`, contraseña `demo-local`. Crear pedido MDF, 18 mm, 40 × 60 cm, Palermo Hollywood. Hay retazos ficticios compatibles. Los avisos salen en el siguiente tick del minuto dentro de 08–20 de Buenos Aires (captura local, sin correo real). Fuera de horario quedan en cola. Dueño: `usuario3@example.invalid` con la misma contraseña, para reportes/reconciliación.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
-# viruta-match-ui
+Pantallas implementadas: login, pedidos, avisos/detalle y reportes. La reserva depende de C; un 501 se informa como error y no simula éxito. Operario/encargado ven inicio hasta que A/C registren sus pantallas.
+
+Guido agrega su UI en `src/modules/dev-a/`, C en `src/modules/dev-c/`. Registrar rutas en `src/modules/equipo-routes.jsx`. Componentes comunes en `src/components/ui/`, layout en `src/components/layout/`; reutilizar el mismo CSS, catálogo API, cliente HTTP y sesión.
+
+```bash
+npm run check
+```
+
+Incluye oxlint, pruebas y build. En producción, Nginx debe servir `dist` con fallback de rutas SPA y proxy de `/api`; cualquier `VITE_*` es público. No colocar secretos en UI.
