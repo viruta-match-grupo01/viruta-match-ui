@@ -1,3 +1,5 @@
+> Actualización 17/10: módulos integrados. Ver docs/INTEGRACION_20261017.md para implementación y pendientes; las instrucciones siguientes son antecedentes de cada módulo.
+
 # Dev A — Guido
 
 Pantallas en esta carpeta. Exportarlas e incorporarlas al array `equipoRoutes` de `../equipo-routes.jsx`: `{path:'/retazos',label:'Retazos',roles:['operario'],element:<Retazos/>}`. Importar React y el componente en ese archivo al registrarlo.

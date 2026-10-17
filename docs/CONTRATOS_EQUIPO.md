@@ -102,3 +102,13 @@ equipo-routes.jsx permite agregar `{path,label,roles,element}`. Registro/login c
 Coincidencias = pares retazo/pedido registrados en avisos, sin duplicar canales. Reservas = registros históricos; retiros/descartes = estados del retazo. Promedios de calificaciones existentes por sucursal. Porcentaje retiros/cargados acumulado; no se interpreta como reducción medida del descarte sin base del negocio.
 
 La regla de bloquear reservas por feedback pendiente y las reglas de puntos del cliente siguen pendientes en la fuente; B no las inventa.
+
+## Pantallas C y cambios transversales (reservas y pago/retiro manual)
+
+Pantallas en `src/modules/dev-c/` (ver su README) contra las fichas C de la API: /reservas (cliente), /retiros y /retiros/:id (encargado). Cambios compartidos, aditivos:
+
+| Archivo | Cambio | Consumidores afectados |
+|---|---|---|
+| components/layout/AppLayout.jsx | Una ruta de equipo-routes sin `label` no aparece en el menú (rutas de detalle como /retiros/:id). | A y C; rutas con label sin cambios. |
+| shared/format.js | stateLabels agrega activa, concretada, vencida, cancelada, pendiente, aprobado, rechazado. | StatusBadge de A/B/C. |
+| styles.css | Colores de badge para esos estados y `a.button` para enlaces con forma de botón. | Todos; no modifica reglas existentes. |
