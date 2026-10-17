@@ -1,4 +1,5 @@
 import React,{useState} from 'react';
+import {Icon} from '../../components/ui/Icon.jsx';
 import {useQuery,useMutation,useQueryClient} from '@tanstack/react-query';
 import {Link} from 'react-router-dom';
 import {request} from '../../api.js';
@@ -15,9 +16,10 @@ export function MisReservasView({user}){
  const columns=[{key:'id',label:'Reserva',render:r=>`#${r.id}`},{key:'material',label:'Retazo',render:r=>`${r.material} ${r.espesor_mm} mm · ${r.alto_cm} × ${r.ancho_cm} cm`},{key:'sucursal_nombre',label:'Sucursal'},{key:'estado',label:'Estado',render:r=><StatusBadge state={r.estado}/>},{key:'confirmada_en',label:'Confirmada',render:r=>date(r.confirmada_en)}];
  return <><PageHeader title="Mi reserva" description="Pagás y retirás en la sucursal de origen. No hay pago anticipado."/>
   <QueryState query={q}/><FeedbackMessage kind="success">{notice}</FeedbackMessage>
-  {q.isSuccess&&activas.length>0&&<section className="cards">{activas.map(r=>{const blocked=cancelBlockReason(r);return <RetazoCard key={r.id} retazo={r} actions={blocked?<p className="muted">{blocked}</p>:<Button variant="danger" onClick={()=>{setNotice('');remove.reset();setCancel(r);}}>Cancelar reserva</Button>}>
+  {q.isSuccess&&activas.length>0&&<div className="stepper" aria-label="Pasos del retiro"><span className="done"><Icon name="check_circle"/>Reserva confirmada</span><span className="separator"/><span className="current"><Icon name="payments"/>Pagar en sucursal</span><span className="separator"/><span><Icon name="inventory_2"/>Retirar material</span></div>}
+  {q.isSuccess&&activas.length>0&&<section className="cards reservation-cards">{activas.map(r=>{const blocked=cancelBlockReason(r);return <RetazoCard key={r.id} retazo={r} actions={blocked?<p className="muted">{blocked}</p>:<Button variant="danger" onClick={()=>{setNotice('');remove.reset();setCancel(r);}}>Cancelar reserva</Button>}>
    <div className="card-top"><StatusBadge state={r.estado}/><span>Reserva #{r.id}</span></div>
-   <div className="deadline"><strong>Pagar y retirar: 12 horas de atención</strong><br/>Hasta: {date(r.vence_en)}<br/>Confirmada: {date(r.confirmada_en)}</div>
+   <div className="deadline"><strong>Pagar y retirar: 12 horas de atención</strong><span className="deadline-display">{date(r.vence_en)}</span>Vencimiento en horario de Buenos Aires.<br/>Confirmada: {date(r.confirmada_en)}</div>
    <p>Pago: <StatusBadge state={r.pago_estado}/></p>
    <p><strong>Comprobante de reserva: #{r.id}</strong><br/><small>Mostralo en {r.sucursal_nombre} para pagar y retirar.</small></p>
    <p className="muted">{r.plazo_retiro}</p>

@@ -1,3 +1,7 @@
+# Viruta Match UI — diseño de Román responsive
+
+Estado actual: docs/DISENO_ROMAN_20261017.md. Se conserva la integración A/B/C y se aplica la referencia visual aportada por Román. El alcance del prototipo del 21/10 y las funciones futuras están diferenciados.
+
 # Viruta Match UI — prototipo integrado A/B/C
 
 Estado y pendientes: docs/INTEGRACION_20261017.md. React/Vite, una sesión y diseño/componentes comunes para los tres módulos. Node 24 (.nvmrc), instalar desde lockfile.
@@ -20,4 +24,4 @@ Datos de ejemplo: usuario1@example.invalid a usuario5@example.invalid, contrase�
 npm run check
 ```
 
-Incluye lint, 36 pruebas y build. Falta feedback, cuentas públicas, fotos reales e integración MercadoPago. UI estática en producción requiere fallback SPA/proxy/HTTPS; esta entrega no despliega infraestructura.
+Incluye lint, 42 pruebas y build. Falta feedback, cuentas públicas, fotos reales e integración MercadoPago. UI estática en producción requiere fallback SPA/proxy/HTTPS; esta entrega no despliega infraestructura.

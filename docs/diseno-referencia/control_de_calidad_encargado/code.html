@@ -1,0 +1,474 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-bright": "#fbf9f3", "surface-container-low": "#f5f3ed", "on-primary-container": "#fff1eb", "on-secondary-container": "#586377", "inverse-surface": "#30312d", "surface-container-high": "#eae8e2", "tertiary": "#006347", "on-surface": "#1b1c18", "on-background": "#1b1c18", "surface-container": "#f0eee8", "error-container": "#ffdad6", "inverse-primary": "#ffb68e", "secondary-fixed-dim": "#bcc7de", "surface-container-highest": "#e4e2dd", "on-surface-variant": "#564338", "on-secondary-fixed": "#111c2d", "on-error-container": "#93000a", "background": "#fbf9f3", "on-primary-fixed-variant": "#763300", "surface-variant": "#e4e2dd", "secondary-container": "#d5e0f8", "surface-dim": "#dcdad4", "tertiary-fixed": "#97f5cc", "tertiary-container": "#147e5d", "primary-fixed-dim": "#ffb68e", "on-tertiary-container": "#cbffe5", "outline-variant": "#ddc1b3", "secondary": "#545f73", "primary-fixed": "#ffdbca", "on-error": "#ffffff", "secondary-fixed": "#d8e3fb", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#331200", "surface-tint": "#9b4500", "on-primary": "#ffffff", "primary": "#903f00", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#3c475a", "inverse-on-surface": "#f3f1eb", "tertiary-fixed-dim": "#7bd8b1", "on-tertiary-fixed-variant": "#00513a", "primary-container": "#b45309", "error": "#ba1a1a", "on-tertiary-fixed": "#002115", "outline": "#897267", "surface": "#fbf9f3" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.875rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "margin-desktop": "2rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "metric-display": ["JetBrains Mono"], "metric-value": ["JetBrains Mono"], "label-code": ["JetBrains Mono"], "label-caps": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "metric-display": ["1.875rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "metric-value": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-code": ["0.8125rem", { "lineHeight": "1.125rem", "fontWeight": "500" }], "label-caps": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "fontWeight": "700" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><img alt="Logo Viruta Match" class="w-9 h-9 rounded-md object-contain shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1X-H1Jl1OsSHqVqwyl0lI-_i_ezAXsPQUQCa21tvK0HBUhbH_Q1Z19Gcp_hH6fgpzugaXtrX9Dv9SHmpupBZHUN6vdQjR_VEI_ib8pU4i3uLHBVsLAYdJ-BqcXnRPxCGI5-gBKo7SiFdwm_yCSL_IVq4pKx1VF7YlBGi389-ajVtjAix7XTtKuLmHknFF4928yIoE1ucUR2KPUf_9G8fA2jTj6ZRy0jrnXZFkNV9P_PgtYa-LQlOxZmN8o"><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md text-on-surface leading-tight truncate">Viruta Match</span><span class="font-label-caps text-label-caps uppercase text-on-surface-variant truncate">Terminal · La Viruta</span></div></div><div class="p-gutter"><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><div class="flex items-center justify-between gap-space-xs mb-space-xs"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant truncate">Sucursal Activa</span><span class="flex items-center gap-1 font-label-code text-label-code text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>Online</span></div><div class="font-body-sm text-body-sm font-semibold text-on-surface truncate">01 — San Telmo</div><div class="font-label-caps text-label-caps text-on-surface-variant truncate">Taller Central · Sync OK</div></div></div><nav class="px-gutter space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="carga-de-retazo" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">add_box</span><span class="font-body-sm text-body-sm">Carga de Retazo</span></div><span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">Operario</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-bold" data-path="control-de-calidad" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">fact_check</span><span class="font-body-sm text-body-sm">Control Calidad</span></div><span class="font-label-code text-label-code bg-primary-fixed text-on-primary-fixed font-bold px-1.5 py-0.5 rounded-full">3</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="entrega-y-cobro" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">qr_code_scanner</span><span class="font-body-sm text-body-sm">Entrega y Cobro</span></div><span class="font-label-code text-label-code bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">4</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-de-retazos" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">inventory_2</span><span class="font-body-sm text-body-sm">Inventario</span></div><span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span></a></nav></div><div class="p-gutter bg-surface-container-high"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Turno Taller</span><span class="font-metric-value text-metric-value text-primary">18 retazos</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5"><div class="bg-primary h-1.5 rounded-full" style="width: 72%"></div></div><div class="flex justify-between items-center mt-space-xs"><span class="font-label-code text-label-code text-on-surface-variant">Meta: 25 piezas</span><span class="font-label-code text-label-code text-tertiary">72%</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-[0_1px_2px_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-primary text-lg">storefront</span><span class="font-body-sm text-body-sm font-semibold text-on-surface">Sucursal 01 — San Telmo</span><span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Central</span></div><div class="hidden lg:flex items-center gap-1 font-label-code text-label-code text-tertiary bg-surface-container-lowest px-2 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="">Terminal #04 · Activo</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded-lg"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Rol:</span><span class="font-body-sm text-body-sm font-semibold text-on-surface">Operario</span><button class="ml-space-xs text-primary font-body-sm text-body-sm font-semibold hover:text-on-primary-fixed-variant transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-base">sync_alt</span><span class="font-label-caps text-label-caps ml-0.5">Cambiar a Encargado</span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Carlos Gómez</span><span class="font-label-caps text-label-caps text-on-surface-variant">Operario de Corte</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Inspection KPIs -->
+<div class="px-gutter-desktop py-space-lg bg-surface-container-low shadow-sm">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold tracking-wider">Flujo de Certificación Técnica</span>
+<span class="text-on-surface-variant font-label-code text-label-code">· Protocolo ISO-Madera #402</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface leading-tight">Control de Calidad y Validación de Retazos</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+          Bandeja de inspección de piezas cargadas por operarios. Al validar se dispara el matching automático con clientes en espera.
+        </p>
+</div>
+<!-- Quick Metrics Strip -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<div class="flex items-center gap-2 bg-amber-500/10 px-space-md py-2 rounded-lg shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-primary-fixed-variant uppercase">Inspección</span>
+<span class="font-metric-value text-metric-value text-primary-container leading-none">3 Pendientes</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-tertiary/10 px-space-md py-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-lg" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-tertiary uppercase">Hoy Certificados</span>
+<span class="font-metric-value text-metric-value text-tertiary leading-none">14 Aprobados</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-error/10 px-space-md py-2 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-error text-lg">cancel</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-error uppercase">Merma Taller</span>
+<span class="font-metric-value text-metric-value text-error leading-none">1 Rechazado</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Status Strip -->
+<div class="flex flex-wrap items-center justify-between text-on-surface-variant bg-surface-container-lowest px-space-md py-1.5 rounded-lg text-xs gap-y-2">
+<div class="flex items-center gap-space-sm font-label-code text-label-code">
+<span class="flex items-center gap-1 text-tertiary font-bold">
+<span class="material-symbols-outlined text-sm">hub</span> Engine Matching: ACTIVO
+        </span>
+<span class="text-outline-variant">|</span>
+<span class="">Demanda en cola San Telmo: <strong class="text-on-surface">42 solicitudes</strong> buscando corte</span>
+</div>
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps uppercase text-on-surface-variant">
+<span class="material-symbols-outlined text-sm">lock_clock</span>
+<span class="">Regla de Oro: Sin aprobación física no hay publicación en marketplace</span>
+</div>
+</div>
+</div>
+<!-- Master-Detail Core Workspace -->
+<div class="px-gutter-desktop py-space-lg">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-start">
+<!-- LEFT COLUMN: Master Intake Queue (4 Cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-xl">pending_actions</span>
+<span class="font-headline-md text-headline-md text-on-surface">Cola de Ingreso</span>
+</div>
+<span class="font-label-code text-label-code bg-surface-container-high text-on-surface px-2 py-0.5 rounded-full font-bold">3 en espera</span>
+</div>
+<div class="space-y-space-sm" id="queueList">
+<!-- Card 1: ACTIVE (Selected) -->
+<div class="cursor-pointer bg-surface-container-lowest p-space-md rounded-xl shadow-md transition-all relative overflow-hidden" role="button" style="box-shadow: 0 4px 12px -2px rgba(180, 83, 9, 0.18);" tabindex="0">
+<!-- Active indicator accent ribbon -->
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-primary-container"></div>
+<div class="flex items-start justify-between gap-space-sm pl-2">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-code text-label-code font-bold text-primary-container bg-primary-fixed/40 px-1.5 py-0.5 rounded">#RET-1049</span>
+<span class="font-label-caps text-label-caps bg-amber-500/15 text-primary-fixed-variant px-1.5 py-0.5 rounded uppercase font-bold">Pendiente Control</span>
+</div>
+<h2 class="font-body-md text-body-md font-bold text-on-surface">Melamina Roble Nebraska 18mm</h2>
+</div>
+<span class="material-symbols-outlined text-primary-container text-xl shrink-0">check_circle</span>
+</div>
+<!-- Dimensions and metadata pill -->
+<div class="mt-space-sm pl-2 flex flex-wrap items-center gap-2">
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1 font-label-code text-label-code text-on-surface font-semibold">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">straighten</span>
+                120.0 × 48.0 cm
+              </div>
+<div class="bg-surface-container-low px-2 py-1 rounded font-label-code text-label-code text-on-surface">
+                0.58 m²
+              </div>
+</div>
+<div class="mt-space-sm pl-2 pt-space-xs flex items-center justify-between text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="">Carlos Gómez (Operario)</span>
+</div>
+<span class="font-label-code text-label-code text-primary font-bold">hace 10 min</span>
+</div>
+</div>
+<!-- Card 2: Queued Item -->
+<div class="cursor-pointer bg-surface-container-lowest p-space-md rounded-xl hover:bg-surface-container-low shadow-sm transition-all" role="button" tabindex="0">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-code text-label-code font-bold text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">#RET-1050</span>
+<span class="font-label-caps text-label-caps bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded uppercase">En Espera</span>
+</div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface">MDF Crudo 15mm</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-xl shrink-0">chevron_right</span>
+</div>
+<div class="mt-space-sm flex flex-wrap items-center gap-2">
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1 font-label-code text-label-code text-on-surface">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">straighten</span>
+                95.0 × 70.0 cm
+              </div>
+<div class="bg-surface-container-low px-2 py-1 rounded font-label-code text-label-code text-on-surface">
+                0.66 m²
+              </div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="">Facundo M.</span>
+</div>
+<span class="font-label-code text-label-code">hace 22 min</span>
+</div>
+</div>
+<!-- Card 3: Queued Item -->
+<div class="cursor-pointer bg-surface-container-lowest p-space-md rounded-xl hover:bg-surface-container-low shadow-sm transition-all" role="button" tabindex="0">
+<div class="flex items-start justify-between gap-space-sm">
+<div>
+<div class="flex items-center gap-space-xs mb-1">
+<span class="font-label-code text-label-code font-bold text-secondary bg-surface-container-high px-1.5 py-0.5 rounded">#RET-1051</span>
+<span class="font-label-caps text-label-caps bg-surface-container-high text-on-surface-variant px-1.5 py-0.5 rounded uppercase">En Espera</span>
+</div>
+<h3 class="font-body-md text-body-md font-semibold text-on-surface">Enchapado Paraíso 18mm</h3>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-xl shrink-0">chevron_right</span>
+</div>
+<div class="mt-space-sm flex flex-wrap items-center gap-2">
+<div class="bg-surface-container-low px-2 py-1 rounded flex items-center gap-1 font-label-code text-label-code text-on-surface">
+<span class="material-symbols-outlined text-xs text-on-surface-variant">straighten</span>
+                160.0 × 30.0 cm
+              </div>
+<div class="bg-surface-container-low px-2 py-1 rounded font-label-code text-label-code text-on-surface">
+                0.48 m²
+              </div>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-xs text-on-surface-variant">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">person</span>
+<span class="">Carlos Gómez</span>
+</div>
+<span class="font-label-code text-label-code">hace 35 min</span>
+</div>
+</div>
+</div>
+<!-- Workshop Environmental Sensor Pill -->
+<div class="bg-surface-container-high p-space-md rounded-xl flex items-center justify-between text-xs text-on-surface-variant mt-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-tertiary">thermostat</span>
+<div>
+<p class="font-label-caps text-label-caps uppercase font-bold text-on-surface">Humedad Taller</p>
+<p class="font-label-code text-label-code">46% HR · Óptimo MDF</p>
+</div>
+</div>
+<span class="font-label-code text-label-code text-tertiary font-bold bg-surface-container-lowest px-2 py-1 rounded">ESTABLE</span>
+</div>
+</div>
+<!-- RIGHT COLUMN: Detail Inspection Pane (8 Cols) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter-desktop">
+<!-- Header Info Bar of Piece Under Inspection -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary-container/15 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary-container text-2xl">crop_square</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-metric-display text-metric-display text-on-surface leading-tight">#RET-1049</span>
+<span class="font-label-caps text-label-caps bg-amber-500/20 text-on-primary-fixed-variant px-2 py-0.5 rounded font-bold uppercase">Estado: En Inspección Física</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                Lote San Telmo 01 · Asignado a estación de verificación #02
+              </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-start sm:self-auto">
+<button class="px-space-md py-2 bg-surface-container text-on-surface-variant hover:text-on-surface rounded-lg font-body-sm text-body-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-base">print</span>
+<span class="">Reimprimir Marbete</span>
+</button>
+<button class="p-2 bg-surface-container text-on-surface-variant hover:text-on-surface rounded-lg transition-colors" title="Historial del corte" type="button">
+<span class="material-symbols-outlined text-base">history</span>
+</button>
+</div>
+</div>
+<!-- Visual Inspection Deck (Interactive Photo + Measurement Grid) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">visibility</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Captura Óptica de Alta Resolución</h3>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container px-space-md py-1 rounded text-xs font-label-code text-label-code text-on-surface font-semibold flex items-center gap-1 hover:bg-surface-container-high transition-colors" id="toggleGridBtn" type="button">
+<span class="material-symbols-outlined text-sm">grid_4x4</span> Guía Calibrada: ON
+              </button>
+<button class="bg-surface-container px-space-md py-1 rounded text-xs font-label-code text-label-code text-on-surface font-semibold flex items-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-sm">zoom_in</span> Zoom 100%
+              </button>
+</div>
+</div>
+<!-- Photo Container with Rule Overlays -->
+<div class="relative w-full aspect-[16/9] sm:aspect-[21/9] bg-stone-900 rounded-lg overflow-hidden shadow-inner flex items-center justify-center">
+<!-- Inspection Wood Board Photo -->
+<img class="w-full h-full object-cover select-none" data-alt="Close up overhead shot of a clean rectangular cut of Nebraska Oak melamine wood board sitting on an industrial calibrated carpenter cutting mat. The board has crisp straight edge cuts, beautiful natural light wood grain texture, warm amber highlights, and sharp square corners without chipping or tears. Crisp workshop lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJXg4T9fl8a3DV28a2Ih7zAlxTrCX3JW7NUmwnOGKgBf9n31cvVs0Z0wfAEGNxInYkeHKl1WxILNjFRv3HMhOmDhZEyPWLt_EGWxDWfaAyWqqztB1l39gi6z1w7Qt39cjnaTerE6oYPaGnMT4M4JN_psuzzwvRv7vL0NOwjRd61x5JvLWPtLAmsuItZI7J1_twwo8M7EgSiDrOcPTzyyL84rmUcJBsmMGh8mGh4n5dccVbVXw2M6sgSg">
+<!-- Superimposed Calibrated Measurement Grid Overlay -->
+<div class="absolute inset-0 pointer-events-none flex flex-col justify-between p-4" id="gridOverlay">
+<!-- Top horizontal ruler indicator -->
+<div class="w-full flex items-center justify-between text-white/80 font-label-code text-label-code bg-black/40 backdrop-blur-sm px-3 py-1 rounded">
+<span class="flex items-center gap-1"><span class="w-2 h-2 rounded-full bg-emerald-400"></span> 0.0 mm</span>
+<span class="tracking-widest uppercase font-bold text-amber-300">◄—— LARGO ÚTIL: 1200 mm ——►</span>
+<span class="">1200.0 mm (OK)</span>
+</div>
+<!-- Center crosshairs / defect targets -->
+<div class="relative w-full h-full my-2 flex items-center justify-center">
+<!-- Optical Corner Alignment Markers -->
+<div class="absolute top-2 left-2 w-8 h-8 border-t-2 border-l-2 border-amber-400/80"></div>
+<div class="absolute top-2 right-2 w-8 h-8 border-t-2 border-r-2 border-amber-400/80"></div>
+<div class="absolute bottom-2 left-2 w-8 h-8 border-b-2 border-l-2 border-amber-400/80"></div>
+<div class="absolute bottom-2 right-2 w-8 h-8 border-b-2 border-r-2 border-amber-400/80"></div>
+<!-- Green Surface Inspection Reticle -->
+<div class="bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 text-white text-xs font-label-code shadow-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary-fixed animate-ping"></span>
+<span class="">Superficie Homogénea · Escuadra a 90° Perfecta</span>
+</div>
+</div>
+<!-- Bottom Vertical Width Indicator -->
+<div class="w-full flex items-center justify-between text-white/80 font-label-code text-label-code bg-black/40 backdrop-blur-sm px-3 py-1 rounded">
+<span class="">Espesor: 18.0 mm (Calibre Digital OK)</span>
+<span class="tracking-widest uppercase font-bold text-amber-300">◄—— ANCHO ÚTIL: 480 mm ——►</span>
+<span class="text-tertiary-fixed font-bold">VETA LONGITUDINAL</span>
+</div>
+</div>
+<!-- Operator Photo Badge -->
+<div class="absolute bottom-3 left-3 bg-stone-900/90 text-white px-2 py-1 rounded text-xs font-label-code flex items-center gap-1.5">
+<span class="material-symbols-outlined text-xs text-tertiary-fixed">photo_camera</span>
+<span class="">Captura Terminal #04 · 10:14 AM</span>
+</div>
+</div>
+</div>
+<!-- Technical Verification Sheet (Ficha Técnica) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs mb-space-md">
+<span class="material-symbols-outlined text-primary">fact_check</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Ficha de Verificación Técnica</h3>
+</div>
+<!-- Parameter Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1">Material</span>
+<p class="font-body-md text-body-md font-bold text-on-surface leading-snug">Melamina Roble Nebraska</p>
+<div class="mt-1 flex items-center gap-1 text-xs text-tertiary font-bold font-label-code">
+<span class="material-symbols-outlined text-xs">verified</span> Coincide c/ etiqueta
+              </div>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1">Medidas Declaradas</span>
+<p class="font-metric-value text-metric-value text-primary font-bold">120.0 × 48.0 <span class="text-xs font-normal">cm</span></p>
+<span class="font-label-code text-label-code text-xs text-on-surface-variant block mt-1">Espesor: 18.0 mm</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1">Superficie Útil</span>
+<p class="font-metric-value text-metric-value text-on-surface font-bold">0.58 <span class="text-xs font-normal">m²</span></p>
+<span class="font-label-code text-label-code text-xs text-tertiary block mt-1">Aprovechamiento 98%</span>
+</div>
+<div class="bg-surface-container-low p-space-md rounded-lg">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block mb-1">Depósito / Bahía</span>
+<p class="font-body-md text-body-md font-bold text-on-surface flex items-center gap-1">
+<span class="material-symbols-outlined text-base text-primary">shelves</span>
+                Estante B
+              </p>
+<span class="font-label-code text-label-code text-xs text-on-primary-fixed-variant bg-primary-fixed/50 px-1 py-0.5 rounded inline-block mt-1 font-bold">Casillero 04</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex flex-wrap items-center justify-between text-xs text-on-surface-variant gap-2">
+<div class="flex items-center gap-1.5 font-label-code text-label-code">
+<span class="material-symbols-outlined text-sm">warehouse</span>
+<span class="">Sucursal: <strong>Sucursal 01 — San Telmo (Taller Central)</strong></span>
+</div>
+<div class="flex items-center gap-1.5 font-label-code text-label-code text-primary">
+<span class="material-symbols-outlined text-sm">bolt</span>
+<span class="">Matching Proyectado: <strong>3 clientes esperando esta medida exacta</strong></span>
+</div>
+</div>
+</div>
+<!-- Checklist de Control de Calidad (Touch-friendly switches) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">checklist</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Checklist de Conformidad de Taller</h3>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+                Obligatorio para habilitar la liberación del retazo al ecosistema Viruta Match.
+              </p>
+</div>
+<button class="text-primary font-body-sm text-body-sm font-semibold hover:underline flex items-center gap-1" id="selectAllBtn" type="button">
+<span class="material-symbols-outlined text-sm">done_all</span> Marcar todos
+            </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md" id="checklistContainer">
+<!-- Check item 1 -->
+<label class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container transition-colors select-none">
+<input checked="" class="mt-1 w-5 h-5 accent-amber-600 rounded cursor-pointer check-toggle" type="checkbox">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">Sin humedad ni deformaciones</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Plano sin curvaturas, hinchazón por agua ni alabeo perjudicial.</span>
+</div>
+</label>
+<!-- Check item 2 -->
+<label class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container transition-colors select-none">
+<input checked="" class="mt-1 w-5 h-5 accent-amber-600 rounded cursor-pointer check-toggle" type="checkbox">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">Canto y superficie libres de rayaduras</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Ambas caras en condiciones comerciales aptas para reuso premium.</span>
+</div>
+</label>
+<!-- Check item 3 -->
+<label class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container transition-colors select-none">
+<input checked="" class="mt-1 w-5 h-5 accent-amber-600 rounded cursor-pointer check-toggle" type="checkbox">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">Medidas verificadas (+/- 2mm)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Largo útil 120cm x Ancho 48cm calibrado en banco de control.</span>
+</div>
+</label>
+<!-- Check item 4 -->
+<label class="flex items-start gap-space-md p-space-md bg-surface-container-low rounded-xl cursor-pointer hover:bg-surface-container transition-colors select-none">
+<input checked="" class="mt-1 w-5 h-5 accent-amber-600 rounded cursor-pointer check-toggle" type="checkbox">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface leading-snug">Apto para matching directo</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Estudiantes, hobbistas, o carpintería profesional de ensamble.</span>
+</div>
+</label>
+</div>
+</div>
+<!-- Decision Action Footer Block (Encargado Authority Zone) -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-md flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md">
+<!-- Secondary Rejection Action with Reason Selector -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-space-xs">
+<select class="bg-surface-container-low text-on-surface text-sm px-space-md py-3 rounded-lg font-body-sm focus:outline-none focus:ring-2 focus:ring-error" id="rejectReason">
+<option value="astillado">Motivo: Dañado / Astillado en sierra</option>
+<option value="medida">Motivo: Medida insuficiente (&lt; 30cm)</option>
+<option value="error_carga">Motivo: Error en tipo de material</option>
+<option value="humedad">Motivo: Hinchado / Mancha humedad</option>
+</select>
+<button class="px-space-md py-3 bg-red-50 text-error hover:bg-error hover:text-on-error rounded-lg font-body-sm text-body-sm font-semibold transition-colors flex items-center justify-center gap-1.5 shadow-sm" id="rejectBtn" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+<span class="">Rechazar Retazo</span>
+</button>
+</div>
+<!-- Primary Validation Approval CTA -->
+<button class="px-space-xl py-3.5 bg-primary-container text-on-primary hover:bg-on-primary-fixed-variant rounded-lg font-headline-md text-headline-md transition-all flex items-center justify-center gap-space-sm shadow-md active:scale-[0.99]" id="approveBtn" type="button">
+<span class="material-symbols-outlined text-2xl">verified</span>
+<span class="">Aprobar y Validar Retazo (VALIDADO)</span>
+</button>
+</div>
+<!-- Legal & Operational Trigger Disclaimer -->
+<div class="bg-tertiary/10 p-space-md rounded-lg flex items-start gap-space-sm text-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-lg shrink-0 mt-0.5">cloud_done</span>
+<div>
+<span class="font-bold text-tertiary">Disparador de Evento:</span>
+<span class="text-on-surface-variant ml-1 font-label-code text-label-code">event: retazo.validado (ID: RET-1049)</span>
+<p class="text-on-surface-variant mt-0.5 font-body-sm text-body-sm">
+                Al confirmar la validación, el servidor asignará la reserva automática al cliente prioritario con corte de caja compatible y emitirá la orden de retiro QR para caja.
+              </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Notification Toast Simulation (Hidden initially) -->
+<div class="fixed bottom-6 right-6 z-50 bg-inverse-surface text-inverse-on-surface px-space-lg py-space-md rounded-xl shadow-2xl flex items-center gap-space-md transform translate-y-32 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification">
+<div class="w-8 h-8 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shrink-0">
+<span class="material-symbols-outlined text-lg">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-bold leading-tight" id="toastTitle">Retazo #RET-1049 Validado</span>
+<span class="font-label-code text-label-code text-xs text-outline-variant mt-0.5" id="toastMessage">Evento emitido · 3 clientes notificados vía push</span>
+</div>
+</div>
+</div>
+<script>
+  // Quick Micro-interactions for Quality Control Station
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleGridBtn = document.getElementById('toggleGridBtn');
+    const gridOverlay = document.getElementById('gridOverlay');
+    const selectAllBtn = document.getElementById('selectAllBtn');
+    const checkboxes = document.querySelectorAll('.check-toggle');
+    const approveBtn = document.getElementById('approveBtn');
+    const rejectBtn = document.getElementById('rejectBtn');
+    const toast = document.getElementById('toastNotification');
+    const toastTitle = document.getElementById('toastTitle');
+    const toastMsg = document.getElementById('toastMessage');
+
+    // Toggle overlay lines
+    let gridVisible = true;
+    if (toggleGridBtn && gridOverlay) {
+      toggleGridBtn.addEventListener('click', () => {
+        gridVisible = !gridVisible;
+        gridOverlay.style.opacity = gridVisible ? '1' : '0';
+        toggleGridBtn.innerHTML = gridVisible 
+          ? '<span class="material-symbols-outlined text-sm">grid_4x4</span> Guía Calibrada: ON' 
+          : '<span class="material-symbols-outlined text-sm">grid_off</span> Guía Calibrada: OFF';
+      });
+    }
+
+    // Select all checklist
+    if (selectAllBtn) {
+      selectAllBtn.addEventListener('click', () => {
+        checkboxes.forEach(chk => chk.checked = true);
+      });
+    }
+
+    function showToast(title, msg, isSuccess = true) {
+      if (!toast) return;
+      toastTitle.textContent = title;
+      toastMsg.textContent = msg;
+      toast.classList.remove('translate-y-32', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-32', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 4000);
+    }
+
+    if (approveBtn) {
+      approveBtn.addEventListener('click', () => {
+        const allChecked = Array.from(checkboxes).every(c => c.checked);
+        if (!allChecked) {
+          alert('Por favor complete todos los puntos del checklist de conformidad antes de validar.');
+          return;
+        }
+        approveBtn.disabled = true;
+        approveBtn.classList.add('opacity-75');
+        approveBtn.innerHTML = '<span class="material-symbols-outlined animate-spin text-2xl">sync</span> Procesando Matching...';
+        
+        setTimeout(() => {
+          approveBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">done_all</span> ¡Validado y Notificado!';
+          approveBtn.classList.replace('bg-primary-container', 'bg-tertiary');
+          showToast('¡Retazo #RET-1049 Certificado!', 'Matching completado: asignado a orden #ORD-982. Cliente notificado para retiro.');
+        }, 800);
+      });
+    }
+
+    if (rejectBtn) {
+      rejectBtn.addEventListener('click', () => {
+        const reason = document.getElementById('rejectReason').selectedOptions[0].text;
+        if (confirm('¿Confirmar rechazo técnico de #RET-1049? La pieza será enviada a merma/aserrín.')) {
+          showToast('Retazo Descartado a Merma', reason, false);
+        }
+      });
+    }
+  });
+</script></main></div>
+
+</body></html>
