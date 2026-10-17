@@ -1,3 +1,5 @@
+> Actualización 17/10: módulos integrados. Ver docs/INTEGRACION_20261017.md para implementación y pendientes; las instrucciones siguientes son antecedentes de cada módulo.
+
 # Dev C
 
 Agregar pantallas aquí y registrarlas en `../equipo-routes.jsx`. Reutilizar layout/componentes, request y calendario del servidor. No crear otra sesión.
