@@ -1,12 +1,2 @@
-/*
- * Extensión mínima del CSS común para los módulos de A. Usa los mismos tokens de styles.css.
- * Propuesta: extraer CheckField a src/components/ui y mover estas reglas al CSS común.
- */
-.check-list{border:1px solid var(--border);border-radius:7px;padding:16px;margin:0;display:grid;gap:12px}
-.check-list legend{font-size:14px;font-weight:600;padding:0 6px}
-.check-field{flex-direction:row;align-items:center;gap:12px;font-size:16px;font-weight:400;min-height:44px}
-.check-field input{width:24px;height:24px;min-height:0;padding:0;flex:none}
-.price-box{padding:16px;background:#f5f3e9;border-radius:7px;font-size:14px}
-.price-box strong{font-size:23px}
+/* Componentes de A: diseño común en src/styles.css. */
 .form-grid>.form-field.wide,.form-grid>.price-box,.form-grid>.check-list,.form-grid>.warning{grid-column:1/-1}
-textarea{min-height:88px}

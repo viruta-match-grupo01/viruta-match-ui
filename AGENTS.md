@@ -1,3 +1,5 @@
+Leer primero docs/DISENO_ROMAN_20261017.md: diseño vigente y alcance oficial del prototipo. No volver a los estilos verdes/Arial del acuerdo anterior: la referencia visual nueva de Román los reemplaza; sus reglas funcionales se conservan.
+
 # Viruta Match
 
 Leer primero docs/INTEGRACION_20261017.md (estado integrado actual), luego README.md, docs/DECISIONES_20261016.md, docs/ARRANQUE_EQUIPO.md y docs/ACUERDO_DESARROLLO.md. Código/lockfiles de esta entrega son la base reproducible actual; no pedir un ZIP anterior. Mantener módulos A/B/C, contratos HTTP/eventos, una sesión, una DB y calendario compartidos. No implementar reglas pendientes como confirmadas. La UI usa componentes/layout/CSS comunes.
