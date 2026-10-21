@@ -1,0 +1,452 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"><meta content="mobile_tab" name="shell-type"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline": "#897267", "surface": "#fbf9f3", "on-tertiary-container": "#cbffe5", "primary-fixed-dim": "#ffb68e", "tertiary": "#006347", "tertiary-fixed": "#97f5cc", "tertiary-fixed-dim": "#7bd8b1", "secondary-fixed": "#d8e3fb", "inverse-surface": "#30312d", "on-error": "#ffffff", "on-secondary": "#ffffff", "primary-fixed": "#ffdbca", "on-secondary-container": "#586377", "surface-container-high": "#eae8e2", "inverse-on-surface": "#f3f1eb", "secondary": "#545f73", "on-primary-container": "#fff1eb", "on-secondary-fixed-variant": "#3c475a", "surface-variant": "#e4e2dd", "secondary-container": "#d5e0f8", "surface-tint": "#9b4500", "background": "#fbf9f3", "on-primary-fixed-variant": "#763300", "on-surface-variant": "#564338", "surface-dim": "#dcdad4", "on-error-container": "#93000a", "outline-variant": "#ddc1b3", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "surface-container-highest": "#e4e2dd", "error": "#ba1a1a", "surface-container-low": "#f5f3ed", "surface-container-lowest": "#ffffff", "on-background": "#1b1c18", "surface-container": "#f0eee8", "secondary-fixed-dim": "#bcc7de", "inverse-primary": "#ffb68e", "on-surface": "#1b1c18", "on-tertiary-fixed-variant": "#00513a", "error-container": "#ffdad6", "primary": "#903f00", "on-tertiary-fixed": "#002115", "tertiary-container": "#147e5d", "on-primary-fixed": "#331200", "primary-container": "#b45309", "on-secondary-fixed": "#111c2d", "surface-bright": "#fbf9f3" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "margin-tablet": "1.5rem", "gutter": "1rem", "space-xs": "0.25rem", "space-xl": "2rem", "margin-desktop": "2rem", "space-lg": "1.25rem", "space-sm": "0.5rem", "space-md": "0.875rem", "gutter-desktop": "1.5rem", "margin": "1rem" }, "fontFamily": { "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-caps": ["Plus Jakarta Sans"], "label-code": ["JetBrains Mono"], "headline-xl-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "metric-value": ["JetBrains Mono"], "headline-lg-mobile": ["Plus Jakarta Sans"], "metric-display": ["JetBrains Mono"], "body-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-caps": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.06em", "fontWeight": "700" }], "label-code": ["0.8125rem", { "lineHeight": "1.125rem", "fontWeight": "500" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "metric-value": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "fontWeight": "700" }], "metric-display": ["1.875rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;background-color:#fbf9f3;color:#1b1c18;font-family:"Plus Jakarta Sans",sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head><body class="bg-surface text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl pt-safe shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm"><img src="https://lh3.googleusercontent.com/aida/AEtjO1X-H1Jl1OsSHqVqwyl0lI-_i_ezAXsPQUQCa21tvK0HBUhbH_Q1Z19Gcp_hH6fgpzugaXtrX9Dv9SHmpupBZHUN6vdQjR_VEI_ib8pU4i3uLHBVsLAYdJ-BqcXnRPxCGI5-gBKo7SiFdwm_yCSL_IVq4pKx1VF7YlBGi389-ajVtjAix7XTtKuLmHknFF4928yIoE1ucUR2KPUf_9G8fA2jTj6ZRy0jrnXZFkNV9P_PgtYa-LQlOxZmN8o" alt="Logo Viruta Match" class="w-9 h-9 rounded-lg object-contain shadow-sm shrink-0"><div class="flex flex-col"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-on-surface font-bold leading-none">Viruta</span><span class="font-headline-md text-headline-md tracking-tight text-primary-container font-bold leading-none">Match</span></div><span class="font-label-caps text-[0.625rem] tracking-wider uppercase text-on-surface-variant font-medium">Taller &amp; Residuos</span></div></div><div class="flex items-center gap-space-xs"><button class="h-8 px-space-sm bg-surface-container rounded-full flex items-center gap-1 text-on-surface-variant hover:text-on-surface active:scale-95 transition-transform" type="button"><span class="material-symbols-outlined text-[14px] text-primary-container">store</span><span class="font-label-caps text-label-caps uppercase">San Telmo</span><span class="material-symbols-outlined text-[14px]">expand_more</span></button><div class="h-8 px-space-sm bg-secondary-container/60 rounded-full flex items-center gap-1 text-on-secondary-container"><span class="material-symbols-outlined text-[14px] text-primary-container">eco</span><span class="font-label-code text-label-code font-bold">420</span><span class="font-label-caps text-[0.625rem] font-bold uppercase opacity-80">pts</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex flex-col relative w-full px-margin pt-16 pb-28 bg-surface min-h-screen"><div class="flex flex-col w-full pb-10 space-y-5">
+<!-- USER CARD & LEVEL SUMMARY -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-28 h-28 bg-primary-fixed/30 rounded-full blur-xl pointer-events-none"></div>
+<div class="flex items-start justify-between gap-space-sm mb-3">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="relative shrink-0">
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-headline-md text-headline-md shadow-sm">
+            LF
+          </div>
+<span class="absolute bottom-0 right-0 w-4 h-4 rounded-full bg-tertiary-container flex items-center justify-center text-on-tertiary text-[10px]" title="Validado">
+<span class="material-symbols-outlined text-[12px]">check</span>
+</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<h2 class="font-headline-md text-headline-md text-on-surface truncate font-bold">Lucía Fernández</h2>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-caps text-label-caps px-2 py-0.5 rounded-full uppercase">Validada</span>
+</div>
+<p class="font-label-code text-[0.75rem] text-on-surface-variant truncate">lucia.f@gmail.com · DNI 39.812.901</p>
+<p class="font-label-code text-[0.75rem] text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-tertiary-container">phone_iphone</span> +54 9 11 4521-8890
+          </p>
+</div>
+</div>
+<button class="shrink-0 w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+</button>
+</div>
+<!-- Tier & Points Bar -->
+<div class="bg-surface-container-low rounded-lg p-3 space-y-2">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-lg bg-primary-fixed flex items-center justify-center text-on-primary-fixed-variant">
+<span class="material-symbols-outlined text-[18px]">nature_people</span>
+</div>
+<div>
+<p class="font-label-caps text-[0.6875rem] uppercase text-primary-container tracking-wider font-bold">Nivel 2 — Carpintero Consciente</p>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant">Sin penalizaciones ni pendientes</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-metric-value text-metric-value text-primary font-bold">462</span>
+<span class="font-label-caps text-[0.625rem] uppercase text-on-surface-variant block -mt-1">Puntos Viruta</span>
+</div>
+</div>
+<!-- Progress Track -->
+<div class="w-full bg-surface-container rounded-full h-2 overflow-hidden flex">
+<div class="bg-primary-container h-full rounded-full transition-all duration-500" style="width: 76%"></div>
+</div>
+<div class="flex justify-between items-center text-[0.6875rem] font-label-code text-on-surface-variant">
+<span class="">Meta Nivel 3 (Maestro Recuperador)</span>
+<span class="font-semibold text-primary">38 pts restantes</span>
+</div>
+</div>
+</div>
+<!-- SEGMENTATION / PROFILE TYPE -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">badge</span>
+<h3 class="font-headline-md text-[1.05rem] font-bold text-on-surface">Tipo de Perfil</h3>
+</div>
+<span class="font-label-caps text-[0.65rem] text-primary-container bg-primary-fixed px-2 py-0.5 rounded-full font-bold uppercase">Beneficios Activos</span>
+</div>
+<div class="grid grid-cols-1 gap-2" id="client-type-group">
+<!-- Option 1: Selected -->
+<button class="segment-card text-left p-3 rounded-lg bg-surface-container flex items-start justify-between transition-all" data-type="student" type="button">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">school</span>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-body-md font-bold text-on-surface text-[0.9375rem]">Estudiante de Diseño / Arq.</span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant mt-0.5">FADU, UTN, UNSAM y terciarios de ebanistería.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-primary-container text-[20px] check-icon">radio_button_checked</span>
+</button>
+<!-- Option 2 -->
+<button class="segment-card text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low flex items-start justify-between transition-all" data-type="hobbyist" type="button">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">handyman</span>
+</div>
+<div>
+<span class="font-body-md font-bold text-on-surface text-[0.9375rem]">Hobbista / Entusiasta DIY</span>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant mt-0.5">Proyectos personales, manualidades y reparaciones hogareñas.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px] check-icon">radio_button_unchecked</span>
+</button>
+<!-- Option 3 -->
+<button class="segment-card text-left p-3 rounded-lg bg-surface-container-lowest hover:bg-surface-container-low flex items-start justify-between transition-all" data-type="pro" type="button">
+<div class="flex items-start gap-2.5">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high text-on-surface-variant flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">precision_manufacturing</span>
+</div>
+<div>
+<span class="font-body-md font-bold text-on-surface text-[0.9375rem]">Profesional / Taller Carpintero</span>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant mt-0.5">Demanda de volumen, apliques continuos y optimización de costes.</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline-variant text-[20px] check-icon">radio_button_unchecked</span>
+</button>
+</div>
+<div class="p-2.5 rounded-lg bg-tertiary-container/10 flex items-start gap-2">
+<span class="material-symbols-outlined text-tertiary-container text-[18px] shrink-0 mt-0.5">verified</span>
+<p class="font-body-sm text-[0.75rem] text-on-surface">
+<span class="font-bold text-tertiary-container">Ventaja activa:</span> Prioridad de notificación en lotes pequeños (&lt;120cm) y 20% descuento adicional en servicio de escuadradora.
+      </p>
+</div>
+</div>
+<!-- MATCHING ENGINE & PROJECT PREFERENCES -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">filter_alt</span>
+<h3 class="font-headline-md text-[1.05rem] font-bold text-on-surface">Motor de Matching en Vivo</h3>
+</div>
+<div class="flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container/60 text-on-secondary-container font-label-caps text-[0.625rem] font-bold uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse"></span> Auto-Sync
+      </div>
+</div>
+<!-- Active Project Name -->
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center justify-between">
+<span class="">Proyecto Activo</span>
+<span class="text-[0.625rem] lowercase font-normal text-on-surface-variant">(asigna retazos directo)</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-11 px-3 pr-10 rounded-lg bg-surface-container font-body-md text-[0.9375rem] font-medium text-on-surface focus:outline-none focus:bg-surface-container-low transition-colors" type="text" value="Estantería Modular Nórdica">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant absolute right-3 pointer-events-none">folder_special</span>
+</div>
+</div>
+<!-- Material Multi-select -->
+<div class="space-y-1.5">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Materiales / Placas de Interés</label>
+<div class="flex flex-wrap gap-1.5" id="materials-group">
+<button class="mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-inverse-surface text-inverse-on-surface flex items-center gap-1.5" data-selected="true" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> Melamina
+        </button>
+<button class="mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-inverse-surface text-inverse-on-surface flex items-center gap-1.5" data-selected="true" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span> MDF / Fibrofácil
+        </button>
+<button class="mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-surface-container text-on-surface-variant flex items-center gap-1.5" data-selected="false" type="button">
+          Pino Finger Joint
+        </button>
+<button class="mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-surface-container text-on-surface-variant flex items-center gap-1.5" data-selected="false" type="button">
+          Enchapado Paraíso
+        </button>
+<button class="mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-surface-container text-on-surface-variant flex items-center gap-1.5" data-selected="false" type="button">
+          Terciado / Fenólico
+        </button>
+</div>
+</div>
+<!-- Dimension Minimums (Steppers) -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<!-- Largo Min -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-caps text-[0.625rem] uppercase tracking-wider text-on-surface-variant font-bold">Largo Mínimo</span>
+<span class="font-label-code text-[0.6875rem] text-primary-container font-bold">cm</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold text-lg active:scale-95 shadow-sm" onclick="adjustValue('dim-largo', -5, 20)" type="button">-</button>
+<span class="font-metric-display text-[1.4rem] font-bold text-on-surface" id="dim-largo">100</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold text-lg active:scale-95 shadow-sm" onclick="adjustValue('dim-largo', 5, 300)" type="button">+</button>
+</div>
+</div>
+<!-- Ancho Min -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col justify-between">
+<div class="flex justify-between items-center mb-1">
+<span class="font-label-caps text-[0.625rem] uppercase tracking-wider text-on-surface-variant font-bold">Ancho Mínimo</span>
+<span class="font-label-code text-[0.6875rem] text-primary-container font-bold">cm</span>
+</div>
+<div class="flex items-center justify-between">
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold text-lg active:scale-95 shadow-sm" onclick="adjustValue('dim-ancho', -5, 10)" type="button">-</button>
+<span class="font-metric-display text-[1.4rem] font-bold text-on-surface" id="dim-ancho">40</span>
+<button class="w-9 h-9 rounded-lg bg-surface-container-lowest text-on-surface flex items-center justify-center font-bold text-lg active:scale-95 shadow-sm" onclick="adjustValue('dim-ancho', 5, 200)" type="button">+</button>
+</div>
+</div>
+</div>
+<!-- Espesor Select -->
+<div class="space-y-1.5">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant">Espesor Requerido</label>
+<div class="grid grid-cols-4 gap-1.5" id="thickness-group">
+<button class="thick-btn py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-[0.8125rem] font-semibold text-center" data-val="15" type="button">15 mm</button>
+<button class="thick-btn py-2 rounded-lg bg-primary-container text-on-primary font-label-code text-[0.8125rem] font-bold text-center shadow-sm" data-val="18" type="button">18 mm</button>
+<button class="thick-btn py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-[0.8125rem] font-semibold text-center" data-val="25" type="button">25 mm</button>
+<button class="thick-btn py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-[0.8125rem] font-semibold text-center" data-val="any" type="button">Cualquiera</button>
+</div>
+</div>
+<!-- Live Matches Banner -->
+<div class="w-full bg-surface-container-high rounded-lg p-3 flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-primary-container/15 flex items-center justify-center text-primary-container shrink-0">
+<span class="material-symbols-outlined text-[24px]">troubleshoot</span>
+</div>
+<div class="min-w-0 flex-1">
+<div class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<p class="font-body-sm font-bold text-[0.875rem] text-on-surface">3 retazos disponibles ahora</p>
+</div>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant truncate">En Sucursal San Telmo aptos para corte inmediato.</p>
+</div>
+<button class="shrink-0 h-8 px-2.5 bg-surface-container-lowest text-primary font-label-caps text-[0.6875rem] uppercase font-bold rounded-lg shadow-sm" type="button">
+        Ver
+      </button>
+</div>
+</div>
+<!-- SUCURSALES DE RETIRO PREFERIDAS -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">storefront</span>
+<h3 class="font-headline-md text-[1.05rem] font-bold text-on-surface">Sucursales de Retiro</h3>
+</div>
+<span class="font-label-caps text-[0.6875rem] text-on-surface-variant">Prioridad de Alerta</span>
+</div>
+<div class="space-y-2">
+<!-- Sucursal 01 - San Telmo (Primary) -->
+<div class="p-3 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-primary-container text-[22px] shrink-0 mt-0.5">location_on</span>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">Sucursal 01 — San Telmo</span>
+<span class="bg-primary-container text-on-primary font-label-caps text-[0.5625rem] px-1.5 py-0.2 rounded font-bold uppercase">Principal</span>
+</div>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant truncate">Hub Central · A 1.2 km de tu taller</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-amber-700 shrink-0 rounded cursor-pointer" type="checkbox">
+</div>
+<!-- Sucursal 02 - Palermo -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] shrink-0 mt-0.5">store</span>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5 flex-wrap">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">Sucursal 02 — Palermo</span>
+<span class="bg-surface-container-high text-on-surface-variant font-label-caps text-[0.5625rem] px-1.5 py-0.2 rounded font-bold uppercase">Secundaria</span>
+</div>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant truncate">Honduras y Bonpland · A 4.8 km</p>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-amber-700 shrink-0 rounded cursor-pointer" type="checkbox">
+</div>
+<!-- Sucursal 03 - Belgrano -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] shrink-0 mt-0.5">store</span>
+<div class="min-w-0">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">Sucursal 03 — Belgrano</span>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant truncate">Av. Cabildo 1820 · A 7.5 km</p>
+</div>
+</div>
+<input class="w-5 h-5 accent-amber-700 shrink-0 rounded cursor-pointer" type="checkbox">
+</div>
+<!-- Sucursal 05 - Villa Crespo -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] shrink-0 mt-0.5">store</span>
+<div class="min-w-0">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">Sucursal 05 — Villa Crespo</span>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant truncate">Warnes 940 · A 5.1 km</p>
+</div>
+</div>
+<input class="w-5 h-5 accent-amber-700 shrink-0 rounded cursor-pointer" type="checkbox">
+</div>
+<!-- Sucursal 04 - Barracas -->
+<div class="p-3 rounded-lg bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-start gap-2.5 min-w-0">
+<span class="material-symbols-outlined text-on-surface-variant text-[22px] shrink-0 mt-0.5">store</span>
+<div class="min-w-0">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">Sucursal 04 — Barracas</span>
+<p class="font-body-sm text-[0.75rem] text-on-surface-variant truncate">Herrera 1250 · A 3.6 km</p>
+</div>
+</div>
+<input class="w-5 h-5 accent-amber-700 shrink-0 rounded cursor-pointer" type="checkbox">
+</div>
+</div>
+</div>
+<!-- NOTIFICATION CHANNELS -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-3">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary-container text-[20px]">notifications_active</span>
+<h3 class="font-headline-md text-[1.05rem] font-bold text-on-surface">Canales de Notificación Instantánea</h3>
+</div>
+<p class="font-body-sm text-[0.78125rem] text-on-surface-variant -mt-1">
+      Apenas el Encargado de Taller valida la pieza en Control de Calidad:
+    </p>
+<div class="space-y-2.5">
+<!-- WhatsApp Notification -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between gap-2">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">chat</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">WhatsApp Oficial</span>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-[0.5625rem] px-1 rounded uppercase font-bold">Ventana 2h</span>
+</div>
+<p class="font-body-sm text-[0.71875rem] text-on-surface-variant truncate">Alerta inmediata con botón de reserva directa.</p>
+<span class="font-label-code text-[0.6875rem] text-tertiary font-bold">+54 9 11 4521-8890</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+<!-- Email Notification -->
+<div class="p-3 rounded-lg bg-surface-container flex items-center justify-between gap-2">
+<div class="flex items-start gap-2.5 min-w-0">
+<div class="w-8 h-8 rounded-lg bg-secondary text-on-secondary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<div class="min-w-0">
+<span class="font-body-md font-bold text-on-surface text-[0.875rem]">Resumen Diario por Email</span>
+<p class="font-body-sm text-[0.71875rem] text-on-surface-variant truncate">Consolidado nocturno de retazos no reclamados.</p>
+<span class="font-label-code text-[0.6875rem] text-on-surface-variant">lucia.f@gmail.com</span>
+</div>
+</div>
+<label class="relative inline-flex items-center cursor-pointer shrink-0">
+<input checked="" class="sr-only peer" type="checkbox">
+<div class="w-11 h-6 bg-surface-dim peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-surface-container-lowest after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-primary-container"></div>
+</label>
+</div>
+</div>
+<div class="flex items-center gap-2 px-2.5 py-1.5 rounded-lg bg-surface-container-low text-[0.75rem] text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-primary-container">bolt</span>
+<span class="">Frecuencia: <strong>Inmediata al validar</strong> (Ganas prioridad de retiro).</span>
+</div>
+</div>
+<!-- PRIVACY / LEGAL NOTE -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-3 shadow-sm flex items-start gap-2.5">
+<span class="material-symbols-outlined text-outline text-[18px] shrink-0 mt-0.5">policy</span>
+<p class="font-body-sm text-[0.6875rem] text-on-surface-variant leading-relaxed">
+<strong>Ley 25.326 de Protección de Datos Personales:</strong> Tus dimensiones de corte, número de contacto y geolocalización solo se emplean con fines de matching algorítmico y coordinación de retiro seguro en las sucursales del consorcio La Viruta.
+    </p>
+</div>
+<!-- ACTION BUTTONS -->
+<div class="w-full space-y-2 pt-2">
+<!-- Primary CTA -->
+<button class="w-full h-12 bg-primary-container hover:bg-primary active:scale-[0.99] text-on-primary font-headline-md text-[0.9375rem] font-bold rounded-lg shadow-sm flex items-center justify-center gap-2 transition-all" id="save-btn" onclick="savePreferences()" type="button">
+<span class="material-symbols-outlined text-[20px]">save</span>
+<span class="">Guardar Preferencias y Activar Matching</span>
+</button>
+<!-- Secondary History link -->
+<button class="w-full h-11 bg-surface-container hover:bg-surface-container-high text-on-surface font-body-md text-[0.875rem] font-semibold rounded-lg flex items-center justify-center gap-2 transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px]">history</span>
+<span class="">Historial de Retazos Retirados (4 completados)</span>
+</button>
+<!-- Logout Button -->
+<button class="w-full py-2.5 text-error font-body-sm text-[0.8125rem] font-bold flex items-center justify-center gap-1.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">logout</span>
+<span class="">Cerrar Sesión</span>
+</button>
+</div>
+<!-- Toast Notification Simulator -->
+<div class="fixed top-20 left-1/2 -translate-x-1/2 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-lg font-body-sm text-[0.8125rem] flex items-center gap-2 transition-all duration-300 opacity-0 pointer-events-none z-50" id="toast">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px]">check_circle</span>
+<span class="">Preferencias sincronizadas con San Telmo</span>
+</div>
+</div>
+<script>
+  // Stepper logic
+  function adjustValue(id, delta, min) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let val = parseInt(el.textContent, 10) || 0;
+    val = Math.max(min, val + delta);
+    el.textContent = val;
+  }
+
+  // Profile selection toggle
+  document.querySelectorAll('.segment-card').forEach(card => {
+    card.addEventListener('click', () => {
+      document.querySelectorAll('.segment-card').forEach(c => {
+        c.classList.remove('bg-surface-container');
+        c.classList.add('bg-surface-container-lowest');
+        const icon = c.querySelector('.check-icon');
+        if (icon) {
+          icon.textContent = 'radio_button_unchecked';
+          icon.classList.remove('text-primary-container');
+          icon.classList.add('text-outline-variant');
+        }
+      });
+      card.classList.remove('bg-surface-container-lowest');
+      card.classList.add('bg-surface-container');
+      const icon = card.querySelector('.check-icon');
+      if (icon) {
+        icon.textContent = 'radio_button_checked';
+        icon.classList.remove('text-outline-variant');
+        icon.classList.add('text-primary-container');
+      }
+    });
+  });
+
+  // Material chips toggle
+  document.querySelectorAll('.mat-chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      const isSelected = chip.getAttribute('data-selected') === 'true';
+      if (isSelected) {
+        chip.setAttribute('data-selected', 'false');
+        chip.className = 'mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-surface-container text-on-surface-variant flex items-center gap-1.5';
+        const dot = chip.querySelector('span');
+        if (dot) dot.remove();
+      } else {
+        chip.setAttribute('data-selected', 'true');
+        chip.className = 'mat-chip px-3 py-1.5 rounded-full font-label-caps text-[0.6875rem] uppercase transition-all bg-inverse-surface text-inverse-on-surface flex items-center gap-1.5';
+        chip.insertAdjacentHTML('afterbegin', '<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed"></span>');
+      }
+    });
+  });
+
+  // Thickness group toggle
+  document.querySelectorAll('.thick-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.thick-btn').forEach(b => {
+        b.className = 'thick-btn py-2 rounded-lg bg-surface-container text-on-surface-variant font-label-code text-[0.8125rem] font-semibold text-center';
+      });
+      btn.className = 'thick-btn py-2 rounded-lg bg-primary-container text-on-primary font-label-code text-[0.8125rem] font-bold text-center shadow-sm';
+    });
+  });
+
+  // Save feedback
+  function savePreferences() {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.classList.remove('opacity-0', 'pointer-events-none');
+    toast.classList.add('opacity-100');
+    setTimeout(() => {
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0', 'pointer-events-none');
+    }, 2800);
+  }
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.04)]" data-active-classes="text-primary-container font-bold"><div class="flex justify-around items-center h-16 px-space-sm"><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors relative" data-path="retazos" href="#"><span class="material-symbols-outlined text-[22px]">view_in_ar</span><span class="font-label-caps text-[0.6875rem]">Retazos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors relative" data-path="mi-reserva" href="#"><span class="material-symbols-outlined text-[22px]">timer</span><span class="absolute top-1 right-3.5 w-2 h-2 rounded-full bg-primary-container ring-2 ring-surface"></span><span class="font-label-caps text-[0.6875rem]">Mi Reserva</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="mis-puntos" href="#"><span class="material-symbols-outlined text-[22px]">award_star</span><span class="font-label-caps text-[0.6875rem]">Mis Puntos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[56px] min-h-[44px] text-on-surface-variant transition-colors" data-path="perfil" href="#"><span class="material-symbols-outlined text-[22px]">tune</span><span class="font-label-caps text-[0.6875rem]">Perfil</span></a></div></nav>
+
+</body></html>

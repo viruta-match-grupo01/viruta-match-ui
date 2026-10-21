@@ -1,0 +1,604 @@
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_dashboard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-secondary": "#ffffff", "surface-bright": "#fbf9f3", "surface-container-low": "#f5f3ed", "on-primary-container": "#fff1eb", "on-secondary-container": "#586377", "inverse-surface": "#30312d", "surface-container-high": "#eae8e2", "tertiary": "#006347", "on-surface": "#1b1c18", "on-background": "#1b1c18", "surface-container": "#f0eee8", "error-container": "#ffdad6", "inverse-primary": "#ffb68e", "secondary-fixed-dim": "#bcc7de", "surface-container-highest": "#e4e2dd", "on-surface-variant": "#564338", "on-secondary-fixed": "#111c2d", "on-error-container": "#93000a", "background": "#fbf9f3", "on-primary-fixed-variant": "#763300", "surface-variant": "#e4e2dd", "secondary-container": "#d5e0f8", "surface-dim": "#dcdad4", "tertiary-fixed": "#97f5cc", "tertiary-container": "#147e5d", "primary-fixed-dim": "#ffb68e", "on-tertiary-container": "#cbffe5", "outline-variant": "#ddc1b3", "secondary": "#545f73", "primary-fixed": "#ffdbca", "on-error": "#ffffff", "secondary-fixed": "#d8e3fb", "surface-container-lowest": "#ffffff", "on-primary-fixed": "#331200", "surface-tint": "#9b4500", "on-primary": "#ffffff", "primary": "#903f00", "on-tertiary": "#ffffff", "on-secondary-fixed-variant": "#3c475a", "inverse-on-surface": "#f3f1eb", "tertiary-fixed-dim": "#7bd8b1", "on-tertiary-fixed-variant": "#00513a", "primary-container": "#b45309", "error": "#ba1a1a", "on-tertiary-fixed": "#002115", "outline": "#897267", "surface": "#fbf9f3" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-md": "0.875rem", "gutter": "1rem", "space-sm": "0.5rem", "space-xs": "0.25rem", "gutter-desktop": "1.5rem", "margin": "1rem", "space-lg": "1.25rem", "space-xl": "2rem", "margin-tablet": "1.5rem", "margin-desktop": "2rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-xl-mobile": ["Plus Jakarta Sans"], "metric-display": ["JetBrains Mono"], "metric-value": ["JetBrains Mono"], "label-code": ["JetBrains Mono"], "label-caps": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "fontWeight": "600" }], "body-lg": ["1.125rem", { "lineHeight": "1.75rem", "fontWeight": "400" }], "headline-xl-mobile": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "metric-display": ["1.875rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.03em", "fontWeight": "700" }], "metric-value": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-code": ["0.8125rem", { "lineHeight": "1.125rem", "fontWeight": "500" }], "label-caps": ["0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.06em", "fontWeight": "700" }], "headline-xl": ["2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-lg-mobile": ["1.375rem", { "lineHeight": "1.75rem", "fontWeight": "700" }], "headline-lg": ["1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" }], "body-md": ["1rem", { "lineHeight": "1.5rem", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-gutter flex items-center gap-space-sm bg-surface-container-lowest shadow-[0_1px_4px_rgba(0,0,0,0.02)]"><img alt="Logo Viruta Match" class="w-9 h-9 rounded-md object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1X-H1Jl1OsSHqVqwyl0lI-_i_ezAXsPQUQCa21tvK0HBUhbH_Q1Z19Gcp_hH6fgpzugaXtrX9Dv9SHmpupBZHUN6vdQjR_VEI_ib8pU4i3uLHBVsLAYdJ-BqcXnRPxCGI5-gBKo7SiFdwm_yCSL_IVq4pKx1VF7YlBGi389-ajVtjAix7XTtKuLmHknFF4928yIoE1ucUR2KPUf_9G8fA2jTj6ZRy0jrnXZFkNV9P_PgtYa-LQlOxZmN8o"><div class="flex flex-col min-w-0"><span class="font-headline-md text-headline-md text-on-surface leading-tight truncate">Viruta Match</span><span class="font-label-caps text-label-caps uppercase text-on-surface-variant truncate">Terminal · La Viruta</span></div></div><div class="p-gutter"><div class="bg-surface-container-lowest p-space-md rounded-lg shadow-[0_1px_3px_rgba(15,23,42,0.04)]"><div class="flex items-center justify-between gap-space-xs mb-space-xs"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant truncate">Sucursal Activa</span><span class="flex items-center gap-1 font-label-code text-label-code text-tertiary"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>Online</span></div><div class="font-body-sm text-body-sm font-semibold text-on-surface truncate">01 — San Telmo</div><div class="font-label-caps text-label-caps text-on-surface-variant truncate">Taller Central · Sync OK</div></div></div><nav class="px-gutter space-y-space-xs" data-active-classes="bg-primary-container text-on-primary font-bold"><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="carga-de-retazo" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">add_box</span><span class="font-body-sm text-body-sm">Carga de Retazo</span></div><span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-space-xs py-0.5 rounded">Operario</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="control-de-calidad" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">fact_check</span><span class="font-body-sm text-body-sm">Control Calidad</span></div><span class="font-label-code text-label-code bg-primary-fixed text-on-primary-fixed font-bold px-1.5 py-0.5 rounded-full">3</span></a><a aria-current="page" class="flex items-center justify-between px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-on-primary font-bold" data-path="entrega-y-cobro" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">qr_code_scanner</span><span class="font-body-sm text-body-sm">Entrega y Cobro</span></div><span class="font-label-code text-label-code bg-secondary-container text-on-secondary-container font-bold px-1.5 py-0.5 rounded-full">4</span></a><a class="flex items-center justify-between px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventario-de-retazos" href="#"><div class="flex items-center gap-space-md"><span class="material-symbols-outlined text-space-lg">inventory_2</span><span class="font-body-sm text-body-sm">Inventario</span></div><span class="material-symbols-outlined text-on-surface-variant text-base">chevron_right</span></a></nav></div><div class="p-gutter bg-surface-container-high"><div class="flex items-center justify-between mb-space-xs"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Turno Taller</span><span class="font-metric-value text-metric-value text-primary">18 retazos</span></div><div class="w-full bg-surface-container-highest rounded-full h-1.5"><div class="bg-primary h-1.5 rounded-full" style="width: 72%"></div></div><div class="flex justify-between items-center mt-space-xs"><span class="font-label-code text-label-code text-on-surface-variant">Meta: 25 piezas</span><span class="font-label-code text-label-code text-tertiary">72%</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-gutter-desktop"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs bg-surface-container-lowest px-space-md py-1.5 rounded-lg shadow-[0_1px_2px_rgba(15,23,42,0.04)]"><span class="material-symbols-outlined text-primary text-lg">storefront</span><span class="font-body-sm text-body-sm font-semibold text-on-surface">Sucursal 01 — San Telmo</span><span class="font-label-caps text-label-caps text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Central</span></div><div class="hidden lg:flex items-center gap-1 font-label-code text-label-code text-tertiary bg-surface-container-lowest px-2 py-1 rounded-lg"><span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="">Terminal #04 · Activo</span></div></div><div class="flex items-center gap-space-md"><div class="hidden sm:flex items-center gap-space-xs bg-surface-container-lowest px-space-sm py-1 rounded-lg"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Rol:</span><span class="font-body-sm text-body-sm font-semibold text-on-surface">Operario</span><button class="ml-space-xs text-primary font-body-sm text-body-sm font-semibold hover:text-on-primary-fixed-variant transition-colors flex items-center" type="button"><span class="material-symbols-outlined text-base">sync_alt</span><span class="font-label-caps text-label-caps ml-0.5">Cambiar a Encargado</span></button></div><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right"><span class="font-body-sm text-body-sm font-semibold text-on-surface leading-tight">Carlos Gómez</span><span class="font-label-caps text-label-caps text-on-surface-variant">Operario de Corte</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-background min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Operational Banner & Direct Action Search -->
+<section class="p-gutter-desktop pb-0">
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col xl:flex-row xl:items-center justify-between gap-space-lg pb-space-lg">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase bg-primary-fixed text-on-primary-fixed px-space-xs py-0.5 rounded font-bold">Punto Mostrador</span>
+<span class="font-label-code text-label-code text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-xs">sync</span>
+              Sync Cloud: Activa
+            </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Mostrador de Retiro y Registro de Pago</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-3xl">Validación de código de reserva, cobro en sucursal y entrega física de material. Concreta el ciclo de reserva.</p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-md py-space-sm rounded-lg">
+<span class="material-symbols-outlined text-tertiary">check_circle</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Entregas Hoy</span>
+<span class="font-metric-value text-metric-value text-on-surface">12 <span class="font-label-code text-label-code text-tertiary">(+$48.600)</span></span>
+</div>
+</div>
+<button class="flex items-center gap-space-xs bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm font-semibold px-space-md py-space-sm rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-space-lg text-primary">history</span>
+<span class="">Historial Turno</span>
+</button>
+</div>
+</div>
+<!-- Quick Search Form & Fast Scanner Trigger -->
+<div class="pt-space-md bg-surface-container-low -mx-space-lg -mb-space-lg p-space-lg rounded-b-xl flex flex-col lg:flex-row gap-space-md items-stretch">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-space-md top-1/2 -translate-y-1/2 text-secondary text-xl">search</span>
+<input class="w-full h-12 pl-11 pr-28 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-inner placeholder:text-secondary focus:outline-none focus:ring-2 focus:ring-primary" id="search-input" placeholder="Buscar por Código de Reserva (ej: #RES-8921) o DNI/Nombre de Cliente..." type="text" value="#RES-8921">
+<button class="absolute right-1.5 top-1/2 -translate-y-1/2 flex items-center gap-1 bg-surface-container-high hover:bg-primary hover:text-on-primary text-on-surface px-space-sm py-1.5 rounded font-label-caps text-label-caps uppercase transition-colors" id="qr-modal-open" title="Escanear con pistola o cámara" type="button">
+<span class="material-symbols-outlined text-base">qr_code_scanner</span>
+<span class="">Escanear</span>
+</button>
+</div>
+<!-- Filter Segmented Tabs -->
+<div class="flex items-center gap-1 bg-surface-container-highest p-1 rounded-lg shrink-0 overflow-x-auto">
+<button class="px-space-md py-2 rounded-md bg-surface-container-lowest text-primary font-body-sm text-body-sm font-semibold shadow-sm flex items-center gap-1.5 whitespace-nowrap" type="button">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="">Reservas activas en esta sucursal (4)</span>
+</button>
+<button class="px-space-md py-2 rounded-md text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm font-semibold transition-colors whitespace-nowrap" type="button">
+            Listas para retiro
+          </button>
+<button class="px-space-md py-2 rounded-md text-on-surface-variant hover:text-on-surface font-body-sm text-body-sm font-semibold transition-colors whitespace-nowrap" type="button">
+            Completadas hoy
+          </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Split Layout: Active Inspection & Pending Rail -->
+<section class="p-gutter-desktop grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left & Center: Active Dispatch Card (#RES-8921) (8 cols) -->
+<div class="xl:col-span-8 space-y-space-lg">
+<!-- Status Header Strip -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-md pb-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-code text-label-code bg-surface-container-highest text-on-surface px-2 py-1 rounded font-bold">#RES-8921</span>
+<div class="flex items-center gap-1.5 bg-primary-fixed text-on-primary-fixed font-label-caps text-label-caps px-2.5 py-1 rounded font-bold uppercase tracking-wide">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<span class="">RESERVA ACTIVA · Ventana 2h</span>
+</div>
+</div>
+<div class="flex items-center gap-2 bg-error-container text-on-error-container px-3 py-1.5 rounded-lg shadow-sm">
+<span class="material-symbols-outlined text-lg">timer</span>
+<span class="font-label-code text-label-code font-bold tracking-tight">Tiempo restante: 01h 14m (Vence 18:45 hs)</span>
+</div>
+</div>
+<!-- Client Identity Bar -->
+<div class="p-space-md bg-surface-container-low rounded-lg flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container font-headline-md text-headline-md font-bold">
+              LF
+            </div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-md text-headline-md text-on-surface font-semibold">Lucía Fernández</span>
+<span class="font-label-caps text-label-caps bg-surface-container-highest text-on-surface-variant px-1.5 py-0.5 rounded">FADU / Arquitectura</span>
+</div>
+<div class="flex flex-wrap items-center gap-x-space-md gap-y-1 font-body-sm text-body-sm text-on-surface-variant pt-0.5">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">call</span>
+                  +54 9 11 4521-8890
+                </span>
+<span class="flex items-center gap-1 text-tertiary font-semibold">
+<span class="material-symbols-outlined text-sm fill-1" style="font-variation-settings: 'FILL' 1;">star</span>
+                  5.0 ★ <span class="text-on-surface-variant font-normal">(4 retiros cumplidos)</span>
+</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs self-stretch md:self-auto justify-end">
+<button class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-body-sm text-body-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-base">chat</span>
+<span class="">WhatsApp</span>
+</button>
+<button class="px-space-md py-1.5 bg-surface-container hover:bg-surface-container-high rounded text-on-surface font-body-sm text-body-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-base">badge</span>
+<span class="">DNI 39.812.901</span>
+</button>
+</div>
+</div>
+<!-- Material Details & Warehouse Staging Matrix -->
+<div class="pt-space-lg grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Timber Spec Card -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Detalle del Retazo Asignado</span>
+<span class="font-label-code text-label-code bg-surface-container px-2 py-0.5 rounded text-secondary">ID: #RET-1032</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg shadow-sm space-y-space-md">
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Melamina Teca 18mm</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Acabado veta texturada · Cara virgen sin perforar</p>
+</div>
+<span class="px-2 py-0.5 rounded font-label-caps text-label-caps uppercase bg-tertiary-fixed text-on-tertiary-fixed font-bold">Excelente Estado</span>
+</div>
+<!-- Measurement Keypad Tiles -->
+<div class="grid grid-cols-3 gap-space-sm">
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Espesor</span>
+<span class="font-metric-value text-metric-value text-on-surface font-bold mt-1">18 <span class="font-label-code text-label-code text-secondary">mm</span></span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Largo</span>
+<span class="font-metric-value text-metric-value text-on-surface font-bold mt-1">1100 <span class="font-label-code text-label-code text-secondary">mm</span></span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Ancho</span>
+<span class="font-metric-value text-metric-value text-on-surface font-bold mt-1">550 <span class="font-label-code text-label-code text-secondary">mm</span></span>
+</div>
+</div>
+<!-- Workshop Location Pin -->
+<div class="p-space-md bg-secondary-fixed text-on-secondary-fixed rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-2xl text-primary">warehouse</span>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block">Ubicación en Depósito</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Estante A · Bahía 02</span>
+</div>
+</div>
+<button class="bg-surface-container-lowest hover:bg-surface text-on-surface px-space-md py-2 rounded-lg font-body-sm text-body-sm font-semibold shadow-sm flex items-center gap-1 transition-all" id="inspect-photo-btn" type="button">
+<span class="material-symbols-outlined text-base">photo_library</span>
+<span class="">Ver foto de pieza</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Piece Image & Quality Snapshot -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-space-sm">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Inspección de Registro</span>
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-inverse-surface shadow-inner group">
+<img class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" data-alt="Close up photography of a warm teak melamine wood board scrap measuring 110 by 55 cm lying on an industrial cutting table in a timber yard warehouse with calibrated yellow metric millimeter ruler scale next to it, sharp natural lighting, warm amber tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYllicaNO7OoLAjive6S1h5dPid_O1mwNcFhGOXs8Xi4L5W02XpXQV6FncPM_hXnrsj41SPkLqcHnDyv2ZdxS92ZbenKl45HB5Nlvgd3Rhep4olTOJzLNCiMUn4dcnaZcidcS2Rz9U9bFK2NT1ove4K6Lc-XaoM36reirQ0AM78Xj2b2gYZCxsOnutNsgkYAyw2Nud5oyXuKF1uPA8batJlqKF19GMZGVLqdLZhilhufV46RJFHdXmAw">
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-sm">
+<div class="flex items-center justify-between w-full">
+<span class="font-label-code text-label-code text-surface-bright flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-tertiary-fixed">verified</span>
+                    Corte escuadrado OK
+                  </span>
+<span class="font-label-code text-label-code bg-inverse-surface/80 text-surface-bright px-1.5 py-0.5 rounded">0.605 m²</span>
+</div>
+</div>
+<div class="absolute top-2 right-2 bg-primary text-on-primary font-label-code text-label-code font-bold px-2 py-0.5 rounded shadow">
+                Lote #082
+              </div>
+</div>
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center justify-between font-label-code text-label-code text-on-surface-variant">
+<span class="">Operario ingreso: C. Gómez</span>
+<span class="">Fecha: Hoy 14:20 hs</span>
+</div>
+</div>
+</div>
+<!-- Payment & Monetary Clearance (MVP Scope) -->
+<div class="mt-space-lg pt-space-lg bg-surface-container-low -mx-space-lg -mb-space-lg p-space-lg rounded-b-xl">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md mb-space-md">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Liquidación y Cobro en Mostrador</span>
+<h4 class="font-headline-md text-headline-md text-on-surface font-bold">Costo de Recupero de Material</h4>
+</div>
+<div class="flex items-baseline gap-2 bg-surface-container-lowest px-space-lg py-space-sm rounded-xl shadow-sm">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Monto Total:</span>
+<span class="font-metric-display text-metric-display text-primary font-bold">$4.200 <span class="font-label-code text-label-code text-on-surface">ARS</span></span>
+</div>
+</div>
+<!-- Payment Methods Switcher -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md mb-space-lg" id="payment-options">
+<!-- Option 1: MercadoPago (Pre-paid / Webhook approved) -->
+<label class="cursor-pointer relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between border-2 border-primary">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-secondary-container flex items-center justify-center text-primary font-bold">
+<span class="material-symbols-outlined text-lg">payments</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-bold text-on-surface block">MercadoPago QR</span>
+<span class="font-label-caps text-label-caps text-tertiary font-bold">ABONADO ONLINE</span>
+</div>
+</div>
+<input checked="" class="w-5 h-5 accent-primary text-primary" name="payment-method" type="radio">
+</div>
+<div class="mt-space-md pt-space-xs bg-surface-container rounded p-space-xs">
+<div class="flex items-center gap-1 font-label-code text-label-code text-tertiary font-semibold">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="">Aprobado vía Webhook MP</span>
+</div>
+<span class="font-label-code text-label-code text-secondary block mt-0.5">Ref: #MP-994821</span>
+</div>
+</label>
+<!-- Option 2: Efectivo en mostrador -->
+<label class="cursor-pointer relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between opacity-80 hover:opacity-100">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-bold">
+<span class="material-symbols-outlined text-lg">point_of_sale</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-bold text-on-surface block">Efectivo en Caja</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">COBRO IN SITU</span>
+</div>
+</div>
+<input class="w-5 h-5 accent-primary" name="payment-method" type="radio">
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-code text-label-code">
+<span class="">Registra cobro fiscal en caja física de sucursal</span>
+</div>
+</label>
+<!-- Option 3: Direct Bank Wire Transfer -->
+<label class="cursor-pointer relative p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-all flex flex-col justify-between opacity-80 hover:opacity-100">
+<div class="flex items-start justify-between">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-on-surface font-bold">
+<span class="material-symbols-outlined text-lg">account_balance</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-bold text-on-surface block">Transferencia</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">ALIAS VIRUTA.TALLER</span>
+</div>
+</div>
+<input class="w-5 h-5 accent-primary" name="payment-method" type="radio">
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-label-code text-label-code">
+<span class="">Comprobante validado por encargado</span>
+</div>
+</label>
+</div>
+<!-- Reception Clearance Checklist & Big Dispatch Trigger -->
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm space-y-space-md">
+<label class="flex items-start gap-space-sm cursor-pointer select-none">
+<input checked="" class="mt-1 w-5 h-5 rounded accent-primary text-primary focus:ring-primary shrink-0" id="check-conformidad" type="checkbox">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md text-on-surface font-bold leading-tight">
+                  El cliente revisó las medidas y el estado del retazo a conformidad
+                </span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+                  Inspección ocular realizada en mostrador: sin grietas, cantos limpios y dimensiones verificadas con cinta métrica.
+                </span>
+</div>
+</label>
+<div class="pt-space-xs flex flex-col sm:flex-row items-stretch sm:items-center gap-space-md">
+<button class="flex-1 min-h-[56px] px-space-xl bg-primary hover:bg-on-primary-fixed-variant text-on-primary rounded-lg font-headline-md text-headline-md font-bold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-sm active:scale-[0.99]" id="btn-confirm-dispatch" type="button">
+<span class="material-symbols-outlined text-2xl">check_box</span>
+<span class="">Confirmar Retiro y Entregar Material (retiro.concretado)</span>
+</button>
+<button class="px-space-md py-3.5 bg-error-container hover:bg-error hover:text-on-error text-on-error-container rounded-lg font-body-sm text-body-sm font-bold transition-colors flex items-center justify-center gap-1 shrink-0" id="btn-reject-reservation" title="Descartar o reportar no retiro" type="button">
+<span class="material-symbols-outlined text-base">cancel</span>
+<span class="">Rechazar / No Retirado</span>
+</button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-code text-label-code pt-1">
+<span class="material-symbols-outlined text-sm text-tertiary">bolt</span>
+<span class="">Efecto en sistema: Libera la reserva, acredita 42 puntos al cliente y dispara encuesta de satisfacción.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Operational Metrics Mini-Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-xl">speed</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block">Tiempo Mostrador</span>
+<span class="font-metric-value text-metric-value text-on-surface font-bold">1m 45s <span class="font-label-code text-label-code text-tertiary">promedio</span></span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-xl">recycling</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block">Madera Recuperada</span>
+<span class="font-metric-value text-metric-value text-on-surface font-bold">148.2 <span class="font-label-code text-label-code text-on-surface-variant">kg hoy</span></span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-xl">verified</span>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant block">Precisión Stock</span>
+<span class="font-metric-value text-metric-value text-on-surface font-bold">99.4% <span class="font-label-code text-label-code text-tertiary">San Telmo</span></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Pending Branch Reservations Rail (4 cols) -->
+<div class="xl:col-span-4 space-y-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl">pending_actions</span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold">Reservas Pendientes</h2>
+</div>
+<span class="font-label-code text-label-code bg-primary-fixed text-on-primary-fixed font-bold px-2 py-0.5 rounded-full">3 restantes</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant pb-space-md">Otras piezas reservadas para retiro físico en Sucursal 01 hoy.</p>
+<!-- List of Other Pending Reservations -->
+<div class="space-y-space-sm" id="queue-container">
+<!-- Card 1: #RES-8922 -->
+<article class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-label-code text-on-surface font-bold">#RES-8922</span>
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-1.5 py-0.2 rounded text-on-surface-variant">Pino Finger</span>
+</div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface group-hover:text-primary transition-colors mt-0.5">Mariano Soria</h4>
+</div>
+<span class="flex items-center gap-1 font-label-code text-label-code text-error font-bold bg-error-container/60 px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">timer</span>
+                42m rest.
+              </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-code text-label-code">
+<span class="">95 x 30 cm (20mm)</span>
+<span class="font-semibold text-on-surface">$2.900 ARS</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+                Estante B · Bahía 04
+              </span>
+<span class="font-label-caps text-label-caps text-tertiary">Efectivo pendiente</span>
+</div>
+</article>
+<!-- Card 2: #RES-8923 -->
+<article class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-label-code text-on-surface font-bold">#RES-8923</span>
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-1.5 py-0.2 rounded text-on-surface-variant">MDF Crudo</span>
+</div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface group-hover:text-primary transition-colors mt-0.5">Estudio Blend (Arq.)</h4>
+</div>
+<span class="flex items-center gap-1 font-label-code text-label-code text-secondary font-bold bg-surface-container-high px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">timer</span>
+                1h 50m rest.
+              </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-code text-label-code">
+<span class="">180 x 60 cm (15mm)</span>
+<span class="font-semibold text-on-surface">$6.100 ARS</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+                Estante D · Pallet 01
+              </span>
+<span class="font-label-caps text-label-caps text-tertiary font-bold">MP Pago OK</span>
+</div>
+</article>
+<!-- Card 3: #RES-8924 -->
+<article class="p-space-md rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors shadow-sm cursor-pointer group">
+<div class="flex items-start justify-between gap-space-xs">
+<div>
+<div class="flex items-center gap-1.5">
+<span class="font-label-code text-label-code text-on-surface font-bold">#RES-8924</span>
+<span class="font-label-caps text-label-caps bg-surface-container-highest px-1.5 py-0.2 rounded text-on-surface-variant">Terciado Guatambú</span>
+</div>
+<h4 class="font-body-md text-body-md font-bold text-on-surface group-hover:text-primary transition-colors mt-0.5">Tomás Benítez</h4>
+</div>
+<span class="flex items-center gap-1 font-label-code text-label-code text-secondary font-bold bg-surface-container-high px-2 py-0.5 rounded">
+<span class="material-symbols-outlined text-xs">timer</span>
+                2h 10m rest.
+              </span>
+</div>
+<div class="mt-space-sm pt-space-xs flex items-center justify-between text-on-surface-variant font-label-code text-label-code">
+<span class="">70 x 40 cm (18mm)</span>
+<span class="font-semibold text-on-surface">$3.450 ARS</span>
+</div>
+<div class="mt-space-xs flex items-center justify-between text-on-surface-variant font-body-sm text-body-sm">
+<span class="flex items-center gap-1 text-xs">
+<span class="material-symbols-outlined text-xs text-primary">location_on</span>
+                Estante A · Bahía 01
+              </span>
+<span class="font-label-caps text-label-caps text-secondary">Transferencia</span>
+</div>
+</article>
+</div>
+<!-- Quick Branch Stock Hint -->
+<div class="mt-space-lg p-space-md bg-secondary-fixed text-on-secondary-fixed rounded-lg">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-base">info</span>
+<span class="font-label-caps text-label-caps uppercase font-bold">Protocolo de Espera</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-snug">
+            Si vence el cronómetro de 2 horas sin retiro, la pieza se libera automáticamente al catálogo online como <strong>DISPONIBLE</strong>.
+          </p>
+</div>
+</div>
+<!-- Workshop Printer Status Widget -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-on-surface">
+<span class="material-symbols-outlined text-lg">print</span>
+</div>
+<div>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface block">Impresora Térmica #01</span>
+<span class="font-label-code text-label-code text-tertiary">Rollo 80mm · Conectada</span>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" type="button">
+          Reimprimir Ticket
+        </button>
+</div>
+</div>
+</section>
+<!-- Success Feedback Toast / Notification (Hidden by default, triggered on delivery) -->
+<div class="hidden fixed bottom-6 right-6 z-50 max-w-md bg-inverse-surface text-inverse-on-surface p-space-lg rounded-xl shadow-2xl flex items-start gap-space-md animate-bounce" id="dispatch-success-toast">
+<div class="w-10 h-10 rounded-full bg-tertiary flex items-center justify-center text-on-tertiary shrink-0">
+<span class="material-symbols-outlined text-2xl">done_all</span>
+</div>
+<div class="flex-1">
+<h4 class="font-headline-md text-headline-md font-bold">¡Entrega y Cobro Registrados!</h4>
+<p class="font-body-sm text-body-sm text-inverse-on-surface/80 mt-1">
+        Retazo #RET-1032 entregado a Lucía Fernández. Se emitió ticket digital por $4.200 ARS y se acreditaron los puntos.
+      </p>
+<div class="mt-space-sm flex items-center gap-space-sm font-label-code text-label-code text-tertiary-fixed">
+<span class="">Transacción: #TXN-88190</span>
+<span class="">•</span>
+<span class="">Stock Actualizado</span>
+</div>
+</div>
+<button class="text-inverse-on-surface/60 hover:text-inverse-on-surface" id="close-toast-btn" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Interactive Modal: Image Preview of Wood Piece -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/70 backdrop-blur-sm flex items-center justify-center p-gutter" id="photo-modal">
+<div class="bg-surface-container-lowest max-w-2xl w-full rounded-2xl overflow-hidden shadow-2xl">
+<div class="p-space-md bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">photo_camera</span>
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Inspección Fotográfica: Retazo #RET-1032</span>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container-highest hover:bg-surface-container flex items-center justify-center text-on-surface" id="close-photo-modal" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<div class="p-space-lg space-y-space-md">
+<div class="relative w-full h-80 rounded-xl overflow-hidden bg-black flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High resolution detailed macro photo of a teak melamine timber remnant showing straight squared cut edges, clean laminate surface without chips, precise dimension markings on factory workshop table, soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9pjJZ1J7gl7va0Hwqq5aOTwX0KCWClBy1MSa7g2C5mUySHwtGUcUD03WBoWa6qn5ifZvn2r3pKJSm3OwvTDCG60_SJR7XGkrag_kw9m_2DU-17g3e5QZhn1aq8VpHf6Y_hSgrjXeEHn-CBebJjXPPCdnBNYy3CIsPI1KHrGLWM8awalw9UcdF_fxr7ncRoPH0rqlIhTaNhpu64zzgzYSM_BkBfBLqe-nNCuH9FZ0xItE2seaFoo7YMA">
+<div class="absolute bottom-4 left-4 bg-inverse-surface/85 backdrop-blur text-surface-bright p-2 rounded-lg font-label-code text-label-code">
+            Fotografiado en Estación #04 por C. Gómez · Control Calidad: APROBADO
+          </div>
+</div>
+<div class="grid grid-cols-2 gap-space-sm text-body-sm font-body-sm">
+<div class="p-space-sm bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-label-caps text-label-caps uppercase block">Grano / Tonalidad</span>
+<span class="font-semibold text-on-surface">Teca Claro / Veta Horizontal</span>
+</div>
+<div class="p-space-sm bg-surface-container-low rounded">
+<span class="text-on-surface-variant font-label-caps text-label-caps uppercase block">Verificación de Cantos</span>
+<span class="font-semibold text-on-surface">4 cantos vivos limpios (sin regruesar)</span>
+</div>
+</div>
+</div>
+<div class="p-space-md bg-surface-container-low flex justify-end">
+<button class="px-space-lg py-2 bg-primary text-on-primary font-body-sm text-body-sm font-bold rounded-lg hover:bg-on-primary-fixed-variant transition-colors" id="confirm-modal-view-btn" type="button">
+          Cerrar Vista Previa
+        </button>
+</div>
+</div>
+</div>
+<!-- Interactive Modal: Simulated QR Scanner -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/80 backdrop-blur-sm flex items-center justify-center p-gutter" id="qr-modal">
+<div class="bg-surface-container-lowest max-w-lg w-full rounded-2xl overflow-hidden shadow-2xl p-space-lg text-center space-y-space-md">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-headline-md text-headline-md font-bold text-on-surface">Lector Óptico de Mostrador</span>
+<button class="text-secondary hover:text-on-surface" id="close-qr-modal" type="button">
+<span class="material-symbols-outlined text-2xl">close</span>
+</button>
+</div>
+<div class="w-full h-64 bg-inverse-surface rounded-xl relative flex flex-col items-center justify-center overflow-hidden">
+<div class="w-48 h-48 border-2 border-dashed border-primary rounded-lg flex items-center justify-center relative">
+<div class="w-full h-0.5 bg-primary absolute top-1/2 -translate-y-1/2 animate-pulse"></div>
+<span class="material-symbols-outlined text-surface-bright/40 text-6xl">qr_code_2</span>
+</div>
+<span class="mt-4 font-label-code text-label-code text-surface-bright">Apunte la pantalla del cliente o ticket impreso...</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Compatible con lectores láser USB / Bluetooth y cámara web integrada de la terminal.</p>
+<button class="w-full py-3 bg-primary text-on-primary font-body-sm text-body-sm font-bold rounded-lg hover:bg-on-primary-fixed-variant transition-colors" id="simulate-scan-btn" type="button">
+        Simular Lectura QR (#RES-8921)
+      </button>
+</div>
+</div>
+<!-- Client-side Logic for Quick Interactions -->
+<script>
+    (function() {
+      // Photo modal triggers
+      const photoBtn = document.getElementById('inspect-photo-btn');
+      const photoModal = document.getElementById('photo-modal');
+      const closePhotoModal = document.getElementById('close-photo-modal');
+      const confirmModalViewBtn = document.getElementById('confirm-modal-view-btn');
+
+      function openModal(modal) {
+        if(modal) modal.classList.remove('hidden');
+      }
+      function closeModal(modal) {
+        if(modal) modal.classList.add('hidden');
+      }
+
+      if(photoBtn) photoBtn.addEventListener('click', () => openModal(photoModal));
+      if(closePhotoModal) closePhotoModal.addEventListener('click', () => closeModal(photoModal));
+      if(confirmModalViewBtn) confirmModalViewBtn.addEventListener('click', () => closeModal(photoModal));
+
+      // QR Scanner triggers
+      const qrBtn = document.getElementById('qr-modal-open');
+      const qrModal = document.getElementById('qr-modal');
+      const closeQrModal = document.getElementById('close-qr-modal');
+      const simScanBtn = document.getElementById('simulate-scan-btn');
+      const searchInput = document.getElementById('search-input');
+
+      if(qrBtn) qrBtn.addEventListener('click', () => openModal(qrModal));
+      if(closeQrModal) closeQrModal.addEventListener('click', () => closeModal(qrModal));
+      if(simScanBtn) {
+        simScanBtn.addEventListener('click', () => {
+          if(searchInput) searchInput.value = '#RES-8921';
+          closeModal(qrModal);
+        });
+      }
+
+      // Delivery Confirmation Execution
+      const confirmDispatchBtn = document.getElementById('btn-confirm-dispatch');
+      const successToast = document.getElementById('dispatch-success-toast');
+      const closeToastBtn = document.getElementById('close-toast-btn');
+      const checkConformidad = document.getElementById('check-conformidad');
+
+      if(confirmDispatchBtn) {
+        confirmDispatchBtn.addEventListener('click', () => {
+          if(!checkConformidad.checked) {
+            alert('Por favor solicite la conformidad del cliente y marque el casillero antes de concretar la entrega.');
+            checkConformidad.focus();
+            return;
+          }
+          confirmDispatchBtn.disabled = true;
+          confirmDispatchBtn.classList.add('opacity-50', 'cursor-not-allowed');
+          confirmDispatchBtn.innerHTML = '<span class="material-symbols-outlined text-2xl animate-spin">refresh</span><span>Registrando entrega...</span>';
+
+          setTimeout(() => {
+            confirmDispatchBtn.innerHTML = '<span class="material-symbols-outlined text-2xl">check</span><span>Entrega Concretada</span>';
+            confirmDispatchBtn.classList.remove('bg-primary');
+            confirmDispatchBtn.classList.add('bg-tertiary');
+            if(successToast) {
+              successToast.classList.remove('hidden');
+            }
+          }, 800);
+        });
+      }
+
+      if(closeToastBtn) {
+        closeToastBtn.addEventListener('click', () => {
+          if(successToast) successToast.classList.add('hidden');
+        });
+      }
+
+      // Payment option toggle highlight
+      const paymentLabels = document.querySelectorAll('#payment-options label');
+      paymentLabels.forEach(label => {
+        label.addEventListener('click', () => {
+          paymentLabels.forEach(l => {
+            l.classList.remove('border-2', 'border-primary', 'opacity-100');
+            l.classList.add('opacity-80');
+          });
+          label.classList.add('border-2', 'border-primary', 'opacity-100');
+          label.classList.remove('opacity-80');
+        });
+      });
+    })();
+  </script>
+</div></main></div>
+
+</body></html>
