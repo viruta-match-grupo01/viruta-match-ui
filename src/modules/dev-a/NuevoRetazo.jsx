@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import {useQuery,useMutation,useQueryClient} from '@tanstack/react-query';
 import {useNavigate} from 'react-router-dom';
-import {request} from '../../api.js';
+import {request,uploadPhoto,mediaUrl} from '../../api.js';
 import {PageHeader,Panel,Button,FormField,StatusBadge,FeedbackMessage,QueryState} from '../../components/ui/index.jsx';
 import {Icon} from '../../components/ui/Icon.jsx';
 import {money} from '../../shared/format.js';
@@ -13,16 +13,17 @@ export function NuevoRetazo({user}) {
   const qc=useQueryClient();const navigate=useNavigate();
   const cats=useQuery({queryKey:['catalogos',user.id],queryFn:()=>request('/catalogos')});
   const branches=useQuery({queryKey:['sucursales',user.id],queryFn:()=>request('/sucursales')});
-  const [form,setForm]=useState(initialRetazoForm),[touched,setTouched]=useState(false),[created,setCreated]=useState(null);
+  const [form,setForm]=useState(initialRetazoForm),[touched,setTouched]=useState(false),[created,setCreated]=useState(null),[fotoUrl,setFotoUrl]=useState('');
+  const upload=useMutation({mutationFn:uploadPhoto,onSuccess:data=>setFotoUrl(data.foto_url)});
   const errors=formErrors(form),query=estimateQuery(form);
   const price=useQuery({queryKey:['retazo-precio',user.id,query],queryFn:()=>request(`/retazos/precio?${query}`),enabled:!!query,retry:false});
   const create=useMutation({
-    mutationFn:()=>request('/retazos',{method:'POST',body:buildRetazoPayload(form)}),
-    onSuccess:retazo=>{setCreated(retazo);setForm(f=>({...initialRetazoForm,material:f.material,espesor_mm:f.espesor_mm,color:f.color,acabado:f.acabado}));setTouched(false);qc.invalidateQueries({queryKey:['retazos',user.id]});}
+    mutationFn:()=>request('/retazos',{method:'POST',body:buildRetazoPayload({...form,foto_url:fotoUrl})}),
+    onSuccess:retazo=>{setCreated(retazo);setForm(f=>({...initialRetazoForm,material:f.material,espesor_mm:f.espesor_mm,color:f.color,acabado:f.acabado}));setTouched(false);setFotoUrl('');qc.invalidateQueries({queryKey:['retazos',user.id]});}
   });
   const branch=branches.data?.find(s=>s.id===user.sucursal_id);
   function update(key,value){setForm(f=>({...f,[key]:value}));setCreated(null);create.reset();}
-  function submit(e){e.preventDefault();setTouched(true);if(Object.keys(errors).length)return;setCreated(null);create.mutate();}
+  function submit(e){e.preventDefault();setTouched(true);if(Object.keys(errors).length||!fotoUrl||upload.isPending)return;setCreated(null);create.mutate();}
   const melamina=form.material==='melamina';
   const shown=key=>touched?errors[key]:undefined;
   return <>
@@ -44,19 +45,19 @@ export function NuevoRetazo({user}) {
         </div></section><section className="form-step"><h2 className="step-title"><span>03</span>Origen y retiro</h2><div className="form-grid">
         <FormField label="Sucursal de origen" hint="Es la de tu usuario; no se puede cambiar."><input type="text" readOnly value={branch?.nombre??'Consultando sucursal…'}/></FormField>
         <FormField label="Forma de retiro" error={shown('forma_retiro')}><input type="text" maxLength={120} required value={form.forma_retiro} onChange={e=>update('forma_retiro',e.target.value)}/></FormField>
-        <FormField label="Foto" hint="La subida de fotos reales está pendiente de acordar con Román. Por ahora se registra una imagen de ejemplo."><select value={FOTO_EJEMPLO} onChange={()=>{}}><option value={FOTO_EJEMPLO}>Imagen de ejemplo (ficticia)</option></select></FormField>
+        <div><FormField label="Foto real del retazo" hint="JPG, PNG o WebP de hasta 4 MB; obligatoria para guardar." error={touched&&!fotoUrl?'Subí una fotografía antes de cargar el retazo.':''}><input type="file" accept="image/jpeg,image/png,image/webp" onChange={e=>{setFotoUrl('');upload.reset();const file=e.target.files?.[0];if(file)upload.mutate(file);}}/></FormField>{upload.isPending&&<small role="status">Subiendo foto…</small>}{fotoUrl&&<small role="status">Foto cargada correctamente.</small>}<FeedbackMessage>{upload.error?.message}</FeedbackMessage></div>
         </div></section>
         {quedaraDescartado(form)&&<p className="warning" role="status">Con una medida menor a {MEDIDA_MIN_OFRECIBLE_CM} cm el retazo se registra como descartado y no se ofrece a ningún cliente.</p>}
         <div className="form-submit"><small>Al guardar, el retazo pasa a control de calidad antes de ofrecerse a clientes.</small><Button type="submit" busy={create.isPending}>{create.isPending?'Guardando…':'Cargar retazo'}</Button></div>
         <FeedbackMessage>{create.error?.message}</FeedbackMessage>
       </form>}
-    </Panel><aside className="panel workbench-preview"><h2><Icon name="photo_camera"/>Registro del material</h2><img src="/retazo-demo.svg" alt="Imagen ficticia de un retazo de madera"/><div>        <div className="price-box" aria-live="polite">
+    </Panel><aside className="panel workbench-preview"><h2><Icon name="photo_camera"/>Registro del material</h2><img src={fotoUrl?mediaUrl(fotoUrl):FOTO_EJEMPLO} alt={fotoUrl?'Foto del retazo cargado':'Ejemplo de retazo (sin foto cargada)'}/><div>        <div className="price-box" aria-live="polite">
           <span>Precio calculado (solo lectura): </span>
           {!query&&<span>completá alto y ancho para calcularlo.</span>}
           {query&&price.isPending&&<span>Calculando…</span>}
           {query&&price.isSuccess&&<><strong>{money(price.data.precio)}</strong><br/><small>{price.data.area_m2.toFixed(2).replace('.',',')} m² × {money(price.data.precio_m2)} por m². Lo fija el dueño; no se puede editar.</small></>}
           {query&&price.isError&&<span className="field-error">{price.error.message}</span>}
         </div>
-<p className="muted">El precio se calcula con las medidas y la tabla del dueño. Cada dimensión se informa en centímetros; el espesor, en milímetros.</p><span className="scope-tag">Foto de ejemplo · Prototipo</span></div></aside></div>
+<p className="muted">El precio se calcula con las medidas y la tabla del dueño. Cada dimensión se informa en centímetros; el espesor, en milímetros.</p><span className="scope-tag">{fotoUrl?'Fotografía real cargada':'Foto pendiente de subir'}</span></div></aside></div>
   </>;
 }

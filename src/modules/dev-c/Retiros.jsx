@@ -37,7 +37,7 @@ export function RetiroDetalleView({user,id}){
    {payBlocked?<p className={r.pago_estado==='aprobado'?'success':'warning'}>{payBlocked}</p>:<form className="form-grid" onSubmit={e=>{e.preventDefault();setNotice('');pay.mutate();}}>
     <FormField label="Medio de pago"><select value={form.medio} onChange={e=>{setForm(f=>({...f,medio:e.target.value}));pay.reset();}}>{MEDIOS_MANUALES.map(m=><option key={m.value} value={m.value}>{m.label}</option>)}</select></FormField>
     <FormField label="Comprobante" hint={form.medio==='efectivo'?'Número del recibo entregado al cliente.':'Número de operación de la transferencia.'}><input required maxLength={200} value={form.comprobante} onChange={e=>{setForm(f=>({...f,comprobante:e.target.value}));pay.reset();}}/></FormField>
-    <p className="form-note">Se registra como pago aprobado por {money(r.monto_a_pagar)}, el precio del retazo. MercadoPago (link/QR) está pendiente de integración.</p>
+    <p className="form-note">Se registra como pago aprobado por {money(r.monto_a_pagar)}, el precio del retazo. MercadoPago solo está disponible para pagos de prueba verificados por la API; en sucursal se sigue admitiendo efectivo o transferencia.</p>
     <Button type="submit" busy={pay.isPending}>{pay.isPending?'Registrando…':'Registrar pago'}</Button>
     <FeedbackMessage>{pay.error?.message}</FeedbackMessage>
    </form>}
