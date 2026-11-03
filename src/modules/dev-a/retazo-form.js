@@ -33,7 +33,7 @@ export function quedaraDescartado(form) {
 /** Cuerpo exacto del contrato POST /api/retazos. Sucursal y operario los pone el servidor. */
 export function buildRetazoPayload(form) {
   const melamina=form.material==='melamina';
-  return {material:form.material,espesor_mm:Number(form.espesor_mm),alto_cm:Number(form.alto_cm),ancho_cm:Number(form.ancho_cm),color:melamina?form.color:null,acabado:melamina?form.acabado:null,foto_url:FOTO_EJEMPLO,forma_retiro:form.forma_retiro.trim()};
+  return {material:form.material,espesor_mm:Number(form.espesor_mm),alto_cm:Number(form.alto_cm),ancho_cm:Number(form.ancho_cm),color:melamina?form.color:null,acabado:melamina?form.acabado:null,foto_url:form.foto_url||FOTO_EJEMPLO,forma_retiro:form.forma_retiro.trim()};
 }
 
 /** Query de GET /api/retazos/precio, o null mientras las medidas no sean válidas. */
